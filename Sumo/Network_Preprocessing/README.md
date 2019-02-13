@@ -1,0 +1,12 @@
+# Extracting node and edge information from shapefiles for SUMO
+Read in shapefile with info on links and nodes.\
+Filter shapefile to keep columns that are useful to SUMO.\
+Generate a list of nodes with traffic lights and a file with nodes and their types.\
+Shows how to process the generated shapefile in SUMO.\
+
+# Running the jupyter notebooks
+You will fist to install conda. \
+After installing conda:\
+create a conda environment from the yml file: conda env create -f environment.yml\
+Activate environment by: source activate Athena\
+Open Jupyter Notebook
