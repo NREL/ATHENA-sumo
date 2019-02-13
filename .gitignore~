@@ -1,4 +1,5 @@
 *.DS_Store
 *.xml
 *.txt
-Sumo/Network_Preprocessing/Data/poly_combined/
+*#
+Sumo/Network_Preprocessing/Data/poly_combined/Sumo_Shapefile
