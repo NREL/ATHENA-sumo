@@ -15,4 +15,4 @@ Open Jupyter Notebook
 # Randomly Generated GIF
 
 
-![](/Data/Bounded_Net/DFW_random.gif)
+![](https://github.com/NREL/ATHENA-siem-sumo/blob/master/Sumo/Network_Preprocessing/Data/Bounded_Net/DFW_random.gif)
