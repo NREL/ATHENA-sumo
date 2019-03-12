@@ -14,4 +14,8 @@ Open Jupyter Notebook
 
 # Randomly Generated GIF
 
-![alt text](ATHENA-siem-sumo/Sumo/Network_Preprocessing/Data/Bounded_Net/DFW_random.gif)
+
+<p align="center">
+  <h3>SUMO Simulation</>
+  <img src="/Data/Bounded_Net/DFW_random.gif" )
+</p>
