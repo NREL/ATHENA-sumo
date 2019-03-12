@@ -14,4 +14,4 @@ Open Jupyter Notebook
 
 # Randomly Generated GIF
 
-![alt text](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Network_Preprocessing/Data/Bounded_Net/DFW_random.gif)
+![alt text](ATHENA-siem-sumo/Sumo/Network_Preprocessing/Data/Bounded_Net/DFW_random.gif)
