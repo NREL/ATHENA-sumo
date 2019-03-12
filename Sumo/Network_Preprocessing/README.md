@@ -11,3 +11,7 @@ After installing conda:\
 create a conda environment from the yml file (under Sumo folder): conda env create -f ../environment.yml\
 Activate environment by: source activate Athena\
 Open Jupyter Notebook
+
+# Randomly Generated GIF
+
+![alt text](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Network_Preprocessing/Data/Bounded_Net/DFW_random.gif "SUMO Simulation DFW")
