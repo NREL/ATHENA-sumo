@@ -15,7 +15,4 @@ Open Jupyter Notebook
 # Randomly Generated GIF
 
 
-<p align="center">
-  <h3>SUMO Simulation</>
-  <img src="/Data/Bounded_Net/DFW_random.gif" )
-</p>
+![](/Data/Bounded_Net/DFW_random.gif)
