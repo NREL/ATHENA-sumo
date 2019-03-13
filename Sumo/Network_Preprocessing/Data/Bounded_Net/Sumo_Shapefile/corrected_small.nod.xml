@@ -1,0 +1,922 @@
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <node id="54942" tl="54942" type="traffic_light" />
+    <node id="54943" type="allway_stop" />
+    <node id="54944" tl="54944" type="traffic_light" />
+    <node id="54945" type="unregulated" />
+    <node id="54946" tl="54946" type="traffic_light" />
+    <node id="54947" tl="54947" type="traffic_light" />
+    <node id="54948" type="unregulated" />
+    <node id="54949" type="unregulated" />
+    <node id="54950" type="priority_stop" />
+    <node id="54951" type="unregulated" />
+    <node id="54952" tl="54952" type="traffic_light" />
+    <node id="54953" type="unregulated" />
+    <node id="54954" tl="54954" type="traffic_light" />
+    <node id="54955" type="allway_stop" />
+    <node id="54956" tl="54956" type="traffic_light" />
+    <node id="54957" type="unregulated" />
+    <node id="54958" tl="54958" type="traffic_light" />
+    <node id="54959" type="allway_stop" />
+    <node id="54960" tl="54960" type="traffic_light" />
+    <node id="54961" type="unregulated" />
+    <node id="54962" tl="54962" type="traffic_light" />
+    <node id="54963" tl="54963" type="traffic_light" />
+    <node id="54964" tl="54964" type="traffic_light" />
+    <node id="54965" tl="54965" type="traffic_light" />
+    <node id="54966" tl="54966" type="traffic_light" />
+    <node id="54967" tl="54967" type="traffic_light" />
+    <node id="54968" type="priority_stop" />
+    <node id="54969" tl="54969" type="traffic_light" />
+    <node id="54970" tl="54970" type="traffic_light" />
+    <node id="54985" type="priority_stop" />
+    <node id="54986" type="unregulated" />
+    <node id="54995" tl="54995" type="traffic_light" />
+    <node id="54996" type="allway_stop" />
+    <node id="54997" type="unregulated" />
+    <node id="55030" tl="55030" type="traffic_light" />
+    <node id="55031" tl="55031" type="traffic_light" />
+    <node id="55051" tl="55051" type="traffic_light" />
+    <node id="55052" type="unregulated" />
+    <node id="55053" type="unregulated" />
+    <node id="55054" tl="55054" type="traffic_light" />
+    <node id="55055" type="unregulated" />
+    <node id="55056" type="unregulated" />
+    <node id="55057" type="unregulated" />
+    <node id="55058" type="unregulated" />
+    <node id="55059" type="unregulated" />
+    <node id="55060" type="unregulated" />
+    <node id="55061" type="unregulated" />
+    <node id="55062" type="unregulated" />
+    <node id="55063" type="unregulated" />
+    <node id="55064" type="unregulated" />
+    <node id="55065" type="unregulated" />
+    <node id="55066" type="unregulated" />
+    <node id="55074" type="unregulated" />
+    <node id="55075" type="unregulated" />
+    <node id="55076" type="unregulated" />
+    <node id="55077" type="unregulated" />
+    <node id="55078" tl="55078" type="traffic_light" />
+    <node id="55079" type="unregulated" />
+    <node id="55080" type="unregulated" />
+    <node id="55081" type="unregulated" />
+    <node id="55082" type="unregulated" />
+    <node id="55083" type="unregulated" />
+    <node id="55084" type="unregulated" />
+    <node id="55089" tl="55089" type="traffic_light" />
+    <node id="55090" type="unregulated" />
+    <node id="55091" type="unregulated" />
+    <node id="55092" type="unregulated" />
+    <node id="55094" type="unregulated" />
+    <node id="55095" tl="55095" type="traffic_light" />
+    <node id="55096" type="unregulated" />
+    <node id="55097" type="unregulated" />
+    <node id="55099" type="unregulated" />
+    <node id="55100" type="unregulated" />
+    <node id="55103" tl="55103" type="traffic_light" />
+    <node id="55104" type="unregulated" />
+    <node id="55125" tl="55125" type="traffic_light" />
+    <node id="55149" type="unregulated" />
+    <node id="55178" type="unregulated" />
+    <node id="55181" type="unregulated" />
+    <node id="55182" type="unregulated" />
+    <node id="55197" type="unregulated" />
+    <node id="55198" type="unregulated" />
+    <node id="55472" tl="55472" type="unregulated" />
+    <node id="60628" type="unregulated" />
+    <node id="60629" tl="60629" type="traffic_light" />
+    <node id="60639" type="unregulated" />
+    <node id="60640" type="unregulated" />
+    <node id="60641" type="unregulated" />
+    <node id="60642" type="unregulated" />
+    <node id="60689" type="unregulated" />
+    <node id="60690" tl="60690" type="traffic_light" />
+    <node id="60691" type="unregulated" />
+    <node id="60692" type="unregulated" />
+    <node id="60693" type="priority" />
+    <node id="60694" type="unregulated" />
+    <node id="60695" type="unregulated" />
+    <node id="60696" type="unregulated" />
+    <node id="60697" type="unregulated" />
+    <node id="60698" type="unregulated" />
+    <node id="60699" type="unregulated" />
+    <node id="60700" type="unregulated" />
+    <node id="60701" type="unregulated" />
+    <node id="60702" type="unregulated" />
+    <node id="60703" type="unregulated" />
+    <node id="60704" tl="60704" type="traffic_light" />
+    <node id="60705" type="unregulated" />
+    <node id="60706" type="unregulated" />
+    <node id="60707" type="unregulated" />
+    <node id="60708" type="unregulated" />
+    <node id="60709" type="unregulated" />
+    <node id="60710" type="unregulated" />
+    <node id="60711" type="unregulated" />
+    <node id="61498" type="priority_stop" />
+    <node id="61499" type="allway_stop" />
+    <node id="61500" type="unregulated" />
+    <node id="61501" tl="61501" type="traffic_light" />
+    <node id="61502" tl="61502" type="traffic_light" />
+    <node id="61503" type="priority_stop" />
+    <node id="61504" type="priority_stop" />
+    <node id="61505" tl="61505" type="traffic_light" />
+    <node id="61506" tl="61506" type="traffic_light" />
+    <node id="61507" tl="61507" type="traffic_light" />
+    <node id="61508" type="unregulated" />
+    <node id="61509" type="priority_stop" />
+    <node id="61510" type="priority_stop" />
+    <node id="61511" tl="61511" type="traffic_light" />
+    <node id="61512" type="unregulated" />
+    <node id="61513" tl="61513" type="traffic_light" />
+    <node id="61514" tl="61514" type="traffic_light" />
+    <node id="61515" tl="61515" type="traffic_light" />
+    <node id="61516" tl="61516" type="traffic_light" />
+    <node id="61526" tl="61526" type="unregulated" />
+    <node id="61527" tl="61527" type="traffic_light" />
+    <node id="61528" type="allway_stop" />
+    <node id="61531" type="unregulated" />
+    <node id="61532" type="allway_stop" />
+    <node id="61533" type="unregulated" />
+    <node id="61534" type="unregulated" />
+    <node id="61535" type="unregulated" />
+    <node id="61536" type="unregulated" />
+    <node id="61537" type="unregulated" />
+    <node id="61538" type="unregulated" />
+    <node id="61539" type="allway_stop" />
+    <node id="61540" type="unregulated" />
+    <node id="61542" type="unregulated" />
+    <node id="61543" type="unregulated" />
+    <node id="61551" type="unregulated" />
+    <node id="61552" type="unregulated" />
+    <node id="61553" type="unregulated" />
+    <node id="61554" type="unregulated" />
+    <node id="61555" type="unregulated" />
+    <node id="61556" type="unregulated" />
+    <node id="61557" type="unregulated" />
+    <node id="61558" type="unregulated" />
+    <node id="61559" type="unregulated" />
+    <node id="61560" type="unregulated" />
+    <node id="61561" type="unregulated" />
+    <node id="61562" type="unregulated" />
+    <node id="61563" type="unregulated" />
+    <node id="61564" type="unregulated" />
+    <node id="61565" type="unregulated" />
+    <node id="61566" type="unregulated" />
+    <node id="61567" type="unregulated" />
+    <node id="61568" type="unregulated" />
+    <node id="61569" type="unregulated" />
+    <node id="61570" type="unregulated" />
+    <node id="61571" type="unregulated" />
+    <node id="61572" type="unregulated" />
+    <node id="61573" type="unregulated" />
+    <node id="61574" type="unregulated" />
+    <node id="61575" type="priority" />
+    <node id="61576" type="unregulated" />
+    <node id="61577" type="unregulated" />
+    <node id="61578" type="unregulated" />
+    <node id="61579" type="unregulated" />
+    <node id="61580" type="unregulated" />
+    <node id="61581" type="unregulated" />
+    <node id="61582" type="unregulated" />
+    <node id="61584" tl="61584" type="traffic_light" />
+    <node id="61585" tl="61585" type="traffic_light" />
+    <node id="61586" type="unregulated" />
+    <node id="61588" tl="61588" type="traffic_light" />
+    <node id="61589" tl="61589" type="traffic_light" />
+    <node id="61590" tl="61590" type="traffic_light" />
+    <node id="61613" type="unregulated" />
+    <node id="61632" type="unregulated" />
+    <node id="61633" tl="61633" type="traffic_light" />
+    <node id="61634" tl="61634" type="traffic_light" />
+    <node id="61635" type="unregulated" />
+    <node id="61636" type="unregulated" />
+    <node id="61637" type="unregulated" />
+    <node id="61638" type="unregulated" />
+    <node id="61639" type="unregulated" />
+    <node id="61640" tl="61640" type="traffic_light" />
+    <node id="61641" tl="61641" type="traffic_light" />
+    <node id="61642" type="priority_stop" />
+    <node id="61643" type="unregulated" />
+    <node id="61644" tl="61644" type="traffic_light" />
+    <node id="61645" tl="61645" type="traffic_light" />
+    <node id="61646" tl="61646" type="traffic_light" />
+    <node id="61647" tl="61647" type="traffic_light" />
+    <node id="61648" tl="61648" type="traffic_light" />
+    <node id="61649" type="priority_stop" />
+    <node id="61650" tl="61650" type="traffic_light" />
+    <node id="61651" type="allway_stop" />
+    <node id="61652" type="unregulated" />
+    <node id="61653" tl="61653" type="traffic_light" />
+    <node id="61654" type="allway_stop" />
+    <node id="61655" type="allway_stop" />
+    <node id="61656" tl="61656" type="traffic_light" />
+    <node id="61657" tl="61657" type="traffic_light" />
+    <node id="61658" tl="61658" type="traffic_light" />
+    <node id="61661" type="unregulated" />
+    <node id="61664" type="unregulated" />
+    <node id="61665" type="unregulated" />
+    <node id="61666" type="unregulated" />
+    <node id="61667" type="unregulated" />
+    <node id="61668" type="unregulated" />
+    <node id="61669" type="unregulated" />
+    <node id="61670" type="unregulated" />
+    <node id="61671" type="unregulated" />
+    <node id="61672" type="priority" />
+    <node id="61674" tl="61674" type="traffic_light" />
+    <node id="61675" tl="61675" type="traffic_light" />
+    <node id="61676" type="unregulated" />
+    <node id="61677" type="unregulated" />
+    <node id="61678" type="unregulated" />
+    <node id="61679" type="priority" />
+    <node id="61680" type="unregulated" />
+    <node id="61681" type="unregulated" />
+    <node id="61682" type="unregulated" />
+    <node id="61683" type="unregulated" />
+    <node id="61684" tl="61684" type="traffic_light" />
+    <node id="61685" type="unregulated" />
+    <node id="61686" type="allway_stop" />
+    <node id="61687" tl="61687" type="traffic_light" />
+    <node id="61702" type="unregulated" />
+    <node id="61725" tl="61725" type="traffic_light" />
+    <node id="61726" type="unregulated" />
+    <node id="61727" type="unregulated" />
+    <node id="61728" tl="61728" type="traffic_light" />
+    <node id="61729" type="unregulated" />
+    <node id="61730" type="unregulated" />
+    <node id="61731" type="priority_stop" />
+    <node id="61732" type="unregulated" />
+    <node id="61733" tl="61733" type="traffic_light" />
+    <node id="61736" type="allway_stop" />
+    <node id="61739" type="unregulated" />
+    <node id="61740" type="unregulated" />
+    <node id="61741" type="unregulated" />
+    <node id="61742" type="unregulated" />
+    <node id="61743" type="unregulated" />
+    <node id="61744" type="unregulated" />
+    <node id="61745" type="unregulated" />
+    <node id="61746" type="unregulated" />
+    <node id="61747" type="unregulated" />
+    <node id="61750" tl="61750" type="traffic_light" />
+    <node id="61751" tl="61751" type="traffic_light" />
+    <node id="61752" type="unregulated" />
+    <node id="61753" type="unregulated" />
+    <node id="61754" type="priority_stop" />
+    <node id="61755" type="unregulated" />
+    <node id="61756" type="unregulated" />
+    <node id="61757" type="unregulated" />
+    <node id="61758" tl="61758" type="unregulated" />
+    <node id="61759" type="unregulated" />
+    <node id="61760" type="unregulated" />
+    <node id="61761" type="unregulated" />
+    <node id="61762" type="unregulated" />
+    <node id="61763" type="unregulated" />
+    <node id="61764" type="unregulated" />
+    <node id="61765" type="unregulated" />
+    <node id="61766" type="unregulated" />
+    <node id="61767" tl="61767" type="traffic_light" />
+    <node id="61768" tl="61768" type="traffic_light" />
+    <node id="61769" tl="61769" type="traffic_light" />
+    <node id="61770" type="allway_stop" />
+    <node id="61771" type="unregulated" />
+    <node id="61772" type="unregulated" />
+    <node id="61773" tl="61773" type="traffic_light" />
+    <node id="61774" type="unregulated" />
+    <node id="61775" type="unregulated" />
+    <node id="61776" type="priority_stop" />
+    <node id="61777" type="priority_stop" />
+    <node id="61778" type="unregulated" />
+    <node id="61779" type="unregulated" />
+    <node id="61780" type="unregulated" />
+    <node id="61781" type="unregulated" />
+    <node id="61782" type="unregulated" />
+    <node id="61783" type="unregulated" />
+    <node id="61784" type="unregulated" />
+    <node id="61785" type="priority" />
+    <node id="61786" type="unregulated" />
+    <node id="61787" type="unregulated" />
+    <node id="61788" tl="61788" type="traffic_light" />
+    <node id="61789" type="unregulated" />
+    <node id="61790" type="unregulated" />
+    <node id="61791" tl="61791" type="traffic_light" />
+    <node id="61792" tl="61792" type="traffic_light" />
+    <node id="61793" type="unregulated" />
+    <node id="61794" type="unregulated" />
+    <node id="61795" tl="61795" type="traffic_light" />
+    <node id="61796" tl="61796" type="traffic_light" />
+    <node id="61797" type="allway_stop" />
+    <node id="61798" type="unregulated" />
+    <node id="61799" tl="61799" type="traffic_light" />
+    <node id="61800" type="unregulated" />
+    <node id="61801" type="unregulated" />
+    <node id="61802" type="unregulated" />
+    <node id="61803" type="priority" />
+    <node id="61804" type="unregulated" />
+    <node id="61805" type="unregulated" />
+    <node id="61806" type="unregulated" />
+    <node id="61807" type="unregulated" />
+    <node id="61808" type="unregulated" />
+    <node id="61809" type="unregulated" />
+    <node id="61810" type="unregulated" />
+    <node id="61811" type="priority" />
+    <node id="61812" type="unregulated" />
+    <node id="61813" type="unregulated" />
+    <node id="61814" type="unregulated" />
+    <node id="61815" type="unregulated" />
+    <node id="61816" type="unregulated" />
+    <node id="61817" type="unregulated" />
+    <node id="61818" type="priority" />
+    <node id="61819" type="unregulated" />
+    <node id="61820" tl="61820" type="traffic_light" />
+    <node id="61821" tl="61821" type="traffic_light" />
+    <node id="61822" tl="61822" type="traffic_light" />
+    <node id="61823" type="unregulated" />
+    <node id="61824" tl="61824" type="traffic_light" />
+    <node id="61825" type="priority" />
+    <node id="61826" type="unregulated" />
+    <node id="61827" type="unregulated" />
+    <node id="61828" type="unregulated" />
+    <node id="61829" type="unregulated" />
+    <node id="61830" type="unregulated" />
+    <node id="61831" type="unregulated" />
+    <node id="61832" type="unregulated" />
+    <node id="61833" tl="61833" type="traffic_light" />
+    <node id="61834" type="unregulated" />
+    <node id="61835" type="unregulated" />
+    <node id="61836" tl="61836" type="traffic_light" />
+    <node id="61837" type="unregulated" />
+    <node id="61838" type="priority" />
+    <node id="61839" type="priority_stop" />
+    <node id="61840" type="unregulated" />
+    <node id="61841" type="unregulated" />
+    <node id="61842" type="unregulated" />
+    <node id="61843" type="priority" />
+    <node id="61844" type="unregulated" />
+    <node id="61845" type="priority" />
+    <node id="61846" type="unregulated" />
+    <node id="61847" tl="61847" type="traffic_light" />
+    <node id="61848" type="allway_stop" />
+    <node id="61901" type="unregulated" />
+    <node id="61902" type="unregulated" />
+    <node id="61903" type="unregulated" />
+    <node id="61904" type="unregulated" />
+    <node id="61906" type="unregulated" />
+    <node id="61907" type="unregulated" />
+    <node id="61908" type="unregulated" />
+    <node id="61910" tl="61910" type="traffic_light" />
+    <node id="61911" tl="61911" type="traffic_light" />
+    <node id="61912" tl="61912" type="traffic_light" />
+    <node id="61913" type="unregulated" />
+    <node id="61914" type="unregulated" />
+    <node id="61925" tl="61925" type="allway_stop" />
+    <node id="61927" tl="61927" type="traffic_light" />
+    <node id="61928" type="allway_stop" />
+    <node id="61929" type="unregulated" />
+    <node id="61930" type="allway_stop" />
+    <node id="61931" type="unregulated" />
+    <node id="61932" type="unregulated" />
+    <node id="61933" type="unregulated" />
+    <node id="61935" tl="61935" type="traffic_light" />
+    <node id="61939" tl="61939" type="traffic_light" />
+    <node id="61940" tl="61940" type="traffic_light" />
+    <node id="61941" type="unregulated" />
+    <node id="61942" type="unregulated" />
+    <node id="61943" tl="61943" type="traffic_light" />
+    <node id="61946" type="unregulated" />
+    <node id="61947" tl="61947" type="traffic_light" />
+    <node id="61948" tl="61948" type="traffic_light" />
+    <node id="61949" tl="61949" type="traffic_light" />
+    <node id="61950" type="unregulated" />
+    <node id="61951" tl="61951" type="traffic_light" />
+    <node id="61952" type="unregulated" />
+    <node id="61953" tl="61953" type="traffic_light" />
+    <node id="61954" tl="61954" type="traffic_light" />
+    <node id="61955" type="unregulated" />
+    <node id="61956" type="unregulated" />
+    <node id="61957" tl="61957" type="traffic_light" />
+    <node id="61958" type="unregulated" />
+    <node id="61959" type="unregulated" />
+    <node id="61960" tl="61960" type="traffic_light" />
+    <node id="61961" type="unregulated" />
+    <node id="61962" type="unregulated" />
+    <node id="61963" type="unregulated" />
+    <node id="61964" type="unregulated" />
+    <node id="61965" type="unregulated" />
+    <node id="61966" type="unregulated" />
+    <node id="61967" type="unregulated" />
+    <node id="61968" type="unregulated" />
+    <node id="61969" tl="61969" type="traffic_light" />
+    <node id="61970" type="unregulated" />
+    <node id="61971" type="unregulated" />
+    <node id="61972" tl="61972" type="traffic_light" />
+    <node id="61973" type="unregulated" />
+    <node id="61974" type="unregulated" />
+    <node id="61975" type="unregulated" />
+    <node id="61976" type="unregulated" />
+    <node id="61977" type="unregulated" />
+    <node id="61978" type="unregulated" />
+    <node id="61979" type="unregulated" />
+    <node id="61980" type="unregulated" />
+    <node id="61981" type="unregulated" />
+    <node id="61982" type="unregulated" />
+    <node id="61983" type="unregulated" />
+    <node id="61984" type="priority" />
+    <node id="61985" type="unregulated" />
+    <node id="61986" type="unregulated" />
+    <node id="61987" type="unregulated" />
+    <node id="61988" tl="61988" type="traffic_light" />
+    <node id="61989" tl="61989" type="unregulated" />
+    <node id="61990" type="unregulated" />
+    <node id="61991" type="unregulated" />
+    <node id="61992" type="unregulated" />
+    <node id="61993" type="unregulated" />
+    <node id="61994" type="unregulated" />
+    <node id="61995" type="unregulated" />
+    <node id="61996" type="unregulated" />
+    <node id="61997" tl="61997" type="unregulated" />
+    <node id="61998" tl="61998" type="traffic_light" />
+    <node id="61999" type="unregulated" />
+    <node id="62000" tl="62000" type="traffic_light" />
+    <node id="62001" type="unregulated" />
+    <node id="62002" type="unregulated" />
+    <node id="62003" type="unregulated" />
+    <node id="62004" type="unregulated" />
+    <node id="62005" type="unregulated" />
+    <node id="62006" type="unregulated" />
+    <node id="62007" type="unregulated" />
+    <node id="62008" type="unregulated" />
+    <node id="62009" type="unregulated" />
+    <node id="62010" type="priority" />
+    <node id="62011" type="unregulated" />
+    <node id="62012" type="unregulated" />
+    <node id="62013" type="unregulated" />
+    <node id="62014" type="unregulated" />
+    <node id="62015" tl="62015" type="traffic_light" />
+    <node id="62016" type="unregulated" />
+    <node id="62017" tl="62017" type="traffic_light" />
+    <node id="62018" tl="62018" type="traffic_light" />
+    <node id="62019" type="unregulated" />
+    <node id="62020" type="unregulated" />
+    <node id="62021" type="unregulated" />
+    <node id="62022" type="unregulated" />
+    <node id="62023" type="unregulated" />
+    <node id="62024" type="unregulated" />
+    <node id="62025" type="unregulated" />
+    <node id="62026" type="unregulated" />
+    <node id="62027" type="unregulated" />
+    <node id="62028" type="unregulated" />
+    <node id="62029" tl="62029" type="traffic_light" />
+    <node id="62030" type="unregulated" />
+    <node id="62031" type="unregulated" />
+    <node id="62032" type="unregulated" />
+    <node id="62033" type="unregulated" />
+    <node id="62034" type="unregulated" />
+    <node id="62035" tl="62035" type="traffic_light" />
+    <node id="62036" tl="62036" type="traffic_light" />
+    <node id="62037" type="unregulated" />
+    <node id="62038" tl="62038" type="traffic_light" />
+    <node id="62039" tl="62039" type="traffic_light" />
+    <node id="62040" tl="62040" type="traffic_light" />
+    <node id="62041" type="priority" />
+    <node id="62042" type="unregulated" />
+    <node id="62043" type="unregulated" />
+    <node id="62044" type="unregulated" />
+    <node id="62045" type="unregulated" />
+    <node id="62046" type="unregulated" />
+    <node id="62047" type="priority" />
+    <node id="62048" type="unregulated" />
+    <node id="62049" type="unregulated" />
+    <node id="62050" type="unregulated" />
+    <node id="62051" type="unregulated" />
+    <node id="62052" type="unregulated" />
+    <node id="62053" tl="62053" type="traffic_light" />
+    <node id="62054" tl="62054" type="traffic_light" />
+    <node id="62055" type="unregulated" />
+    <node id="62056" tl="62056" type="traffic_light" />
+    <node id="62057" type="priority" />
+    <node id="62058" type="unregulated" />
+    <node id="62059" type="unregulated" />
+    <node id="62060" type="unregulated" />
+    <node id="62061" type="unregulated" />
+    <node id="62062" type="unregulated" />
+    <node id="62063" type="unregulated" />
+    <node id="62064" type="unregulated" />
+    <node id="62065" type="unregulated" />
+    <node id="62066" type="unregulated" />
+    <node id="62067" type="unregulated" />
+    <node id="62068" type="unregulated" />
+    <node id="62069" type="unregulated" />
+    <node id="62070" tl="62070" type="traffic_light" />
+    <node id="62071" type="unregulated" />
+    <node id="62072" type="unregulated" />
+    <node id="62073" tl="62073" type="traffic_light" />
+    <node id="62074" type="allway_stop" />
+    <node id="62075" type="allway_stop" />
+    <node id="62076" type="unregulated" />
+    <node id="62077" type="priority" />
+    <node id="62078" type="unregulated" />
+    <node id="62079" type="unregulated" />
+    <node id="62080" type="unregulated" />
+    <node id="62081" type="priority" />
+    <node id="62082" type="unregulated" />
+    <node id="62083" type="unregulated" />
+    <node id="62084" type="unregulated" />
+    <node id="62085" type="unregulated" />
+    <node id="62086" type="unregulated" />
+    <node id="62087" type="unregulated" />
+    <node id="62088" type="priority_stop" />
+    <node id="62089" type="unregulated" />
+    <node id="62090" tl="62090" type="traffic_light" />
+    <node id="62091" type="allway_stop" />
+    <node id="62092" type="priority_stop" />
+    <node id="62093" type="unregulated" />
+    <node id="62094" type="unregulated" />
+    <node id="62095" tl="62095" type="traffic_light" />
+    <node id="62096" tl="62096" type="traffic_light" />
+    <node id="62097" type="unregulated" />
+    <node id="62112" type="unregulated" />
+    <node id="62113" type="unregulated" />
+    <node id="62116" tl="62116" type="traffic_light" />
+    <node id="62121" tl="62121" type="traffic_light" />
+    <node id="62122" type="unregulated" />
+    <node id="62124" tl="62124" type="traffic_light" />
+    <node id="62128" tl="62128" type="traffic_light" />
+    <node id="62129" tl="62129" type="traffic_light" />
+    <node id="62130" type="unregulated" />
+    <node id="62133" type="unregulated" />
+    <node id="62134" type="unregulated" />
+    <node id="62135" tl="62135" type="traffic_light" />
+    <node id="62136" type="priority" />
+    <node id="62137" type="unregulated" />
+    <node id="62139" type="unregulated" />
+    <node id="62140" type="unregulated" />
+    <node id="62141" type="unregulated" />
+    <node id="62142" type="unregulated" />
+    <node id="62143" type="unregulated" />
+    <node id="62144" type="unregulated" />
+    <node id="62147" type="unregulated" />
+    <node id="62148" tl="62148" type="traffic_light" />
+    <node id="62153" type="unregulated" />
+    <node id="62154" type="unregulated" />
+    <node id="62155" type="unregulated" />
+    <node id="62159" tl="62159" type="traffic_light" />
+    <node id="62160" tl="62160" type="traffic_light" />
+    <node id="62161" tl="62161" type="traffic_light" />
+    <node id="62162" tl="62162" type="traffic_light" />
+    <node id="62163" tl="62163" type="traffic_light" />
+    <node id="62164" tl="62164" type="traffic_light" />
+    <node id="62165" type="allway_stop" />
+    <node id="62166" type="allway_stop" />
+    <node id="62167" type="unregulated" />
+    <node id="62168" tl="62168" type="unregulated" />
+    <node id="62169" type="unregulated" />
+    <node id="62170" type="unregulated" />
+    <node id="62171" type="unregulated" />
+    <node id="62172" tl="62172" type="traffic_light" />
+    <node id="62173" type="unregulated" />
+    <node id="62174" type="unregulated" />
+    <node id="62175" type="unregulated" />
+    <node id="62176" type="unregulated" />
+    <node id="62177" type="unregulated" />
+    <node id="62178" type="unregulated" />
+    <node id="62179" type="unregulated" />
+    <node id="62180" type="unregulated" />
+    <node id="62181" type="unregulated" />
+    <node id="62182" type="unregulated" />
+    <node id="62183" type="priority_stop" />
+    <node id="62184" tl="62184" type="traffic_light" />
+    <node id="62185" type="unregulated" />
+    <node id="62186" tl="62186" type="traffic_light" />
+    <node id="62187" tl="62187" type="traffic_light" />
+    <node id="62188" tl="62188" type="traffic_light" />
+    <node id="62189" type="unregulated" />
+    <node id="62190" type="unregulated" />
+    <node id="62191" type="unregulated" />
+    <node id="62192" tl="62192" type="traffic_light" />
+    <node id="62193" tl="62193" type="traffic_light" />
+    <node id="62195" tl="62195" type="traffic_light" />
+    <node id="62196" type="unregulated" />
+    <node id="62197" tl="62197" type="traffic_light" />
+    <node id="62198" tl="62198" type="traffic_light" />
+    <node id="62199" type="priority_stop" />
+    <node id="62200" type="unregulated" />
+    <node id="62201" type="unregulated" />
+    <node id="62202" type="unregulated" />
+    <node id="62203" type="unregulated" />
+    <node id="62204" type="priority" />
+    <node id="62205" type="unregulated" />
+    <node id="62206" type="unregulated" />
+    <node id="62210" type="unregulated" />
+    <node id="62212" type="unregulated" />
+    <node id="62213" type="unregulated" />
+    <node id="62216" type="unregulated" />
+    <node id="62217" type="unregulated" />
+    <node id="62218" type="unregulated" />
+    <node id="62220" type="unregulated" />
+    <node id="62221" type="unregulated" />
+    <node id="62222" type="unregulated" />
+    <node id="62223" type="unregulated" />
+    <node id="62224" type="priority" />
+    <node id="62225" type="unregulated" />
+    <node id="62226" type="unregulated" />
+    <node id="62227" type="unregulated" />
+    <node id="62228" type="unregulated" />
+    <node id="62229" type="unregulated" />
+    <node id="62230" tl="62230" type="traffic_light" />
+    <node id="62231" tl="62231" type="traffic_light" />
+    <node id="62232" type="unregulated" />
+    <node id="62245" type="unregulated" />
+    <node id="62246" tl="62246" type="traffic_light" />
+    <node id="62247" tl="62247" type="traffic_light" />
+    <node id="62248" type="unregulated" />
+    <node id="62249" type="unregulated" />
+    <node id="62250" type="unregulated" />
+    <node id="62251" type="unregulated" />
+    <node id="62252" type="unregulated" />
+    <node id="62254" type="unregulated" />
+    <node id="62255" type="unregulated" />
+    <node id="62256" type="unregulated" />
+    <node id="62257" type="unregulated" />
+    <node id="62258" tl="62258" type="traffic_light" />
+    <node id="62259" tl="62259" type="traffic_light" />
+    <node id="62260" tl="62260" type="traffic_light" />
+    <node id="62261" tl="62261" type="traffic_light" />
+    <node id="62262" type="unregulated" />
+    <node id="62263" type="unregulated" />
+    <node id="62264" type="unregulated" />
+    <node id="62265" type="unregulated" />
+    <node id="62266" type="unregulated" />
+    <node id="62267" type="unregulated" />
+    <node id="62268" tl="62268" type="traffic_light" />
+    <node id="62269" tl="62269" type="priority_stop" />
+    <node id="62270" tl="62270" type="traffic_light" />
+    <node id="62271" tl="62271" type="traffic_light" />
+    <node id="62272" type="unregulated" />
+    <node id="62273" type="unregulated" />
+    <node id="62274" type="unregulated" />
+    <node id="62275" type="unregulated" />
+    <node id="62276" type="priority" />
+    <node id="62277" type="unregulated" />
+    <node id="62278" type="priority" />
+    <node id="62279" type="unregulated" />
+    <node id="62280" type="unregulated" />
+    <node id="62281" tl="62281" type="traffic_light" />
+    <node id="62282" type="unregulated" />
+    <node id="62283" type="priority_stop" />
+    <node id="62284" type="unregulated" />
+    <node id="62285" type="unregulated" />
+    <node id="62286" type="unregulated" />
+    <node id="62287" type="priority_stop" />
+    <node id="62288" tl="62288" type="traffic_light" />
+    <node id="62289" type="allway_stop" />
+    <node id="62290" tl="62290" type="traffic_light" />
+    <node id="62291" tl="62291" type="traffic_light" />
+    <node id="62292" tl="62292" type="traffic_light" />
+    <node id="62293" tl="62293" type="traffic_light" />
+    <node id="62294" type="unregulated" />
+    <node id="62295" type="unregulated" />
+    <node id="62296" type="unregulated" />
+    <node id="62297" tl="62297" type="traffic_light" />
+    <node id="62298" tl="62298" type="traffic_light" />
+    <node id="62299" tl="62299" type="traffic_light" />
+    <node id="62300" tl="62300" type="traffic_light" />
+    <node id="62301" type="unregulated" />
+    <node id="62302" type="unregulated" />
+    <node id="62303" tl="62303" type="priority_stop" />
+    <node id="62304" tl="62304" type="traffic_light" />
+    <node id="62305" type="unregulated" />
+    <node id="62306" tl="62306" type="traffic_light" />
+    <node id="62307" type="unregulated" />
+    <node id="62308" type="unregulated" />
+    <node id="62309" type="allway_stop" />
+    <node id="62310" type="allway_stop" />
+    <node id="62311" type="unregulated" />
+    <node id="62326" tl="62326" type="traffic_light" />
+    <node id="62327" tl="62327" type="traffic_light" />
+    <node id="62328" tl="62328" type="traffic_light" />
+    <node id="62329" tl="62329" type="traffic_light" />
+    <node id="62330" type="allway_stop" />
+    <node id="62331" type="priority_stop" />
+    <node id="62332" tl="62332" type="traffic_light" />
+    <node id="62333" type="unregulated" />
+    <node id="62334" tl="62334" type="traffic_light" />
+    <node id="62335" type="unregulated" />
+    <node id="62336" type="unregulated" />
+    <node id="62337" type="unregulated" />
+    <node id="62338" type="unregulated" />
+    <node id="62339" type="unregulated" />
+    <node id="62340" tl="62340" type="traffic_light" />
+    <node id="62341" type="unregulated" />
+    <node id="62342" type="unregulated" />
+    <node id="62343" type="unregulated" />
+    <node id="62344" type="unregulated" />
+    <node id="62345" tl="62345" type="traffic_light" />
+    <node id="62346" type="unregulated" />
+    <node id="62347" type="unregulated" />
+    <node id="62348" type="unregulated" />
+    <node id="62349" tl="62349" type="traffic_light" />
+    <node id="62350" type="unregulated" />
+    <node id="62351" type="unregulated" />
+    <node id="62352" type="unregulated" />
+    <node id="62353" type="unregulated" />
+    <node id="62354" type="unregulated" />
+    <node id="62355" type="unregulated" />
+    <node id="62356" type="priority" />
+    <node id="62357" type="priority" />
+    <node id="62358" type="unregulated" />
+    <node id="62359" type="unregulated" />
+    <node id="62360" type="unregulated" />
+    <node id="62361" type="unregulated" />
+    <node id="62362" type="unregulated" />
+    <node id="62363" type="unregulated" />
+    <node id="62364" type="unregulated" />
+    <node id="62365" type="unregulated" />
+    <node id="62366" type="unregulated" />
+    <node id="62367" type="unregulated" />
+    <node id="62368" type="unregulated" />
+    <node id="62369" type="unregulated" />
+    <node id="62370" type="unregulated" />
+    <node id="62371" type="unregulated" />
+    <node id="62372" type="unregulated" />
+    <node id="62373" type="allway_stop" />
+    <node id="62374" type="allway_stop" />
+    <node id="62375" type="unregulated" />
+    <node id="62376" type="unregulated" />
+    <node id="62377" type="unregulated" />
+    <node id="62378" type="unregulated" />
+    <node id="62379" type="unregulated" />
+    <node id="62380" type="unregulated" />
+    <node id="62381" type="unregulated" />
+    <node id="62382" type="unregulated" />
+    <node id="62383" type="unregulated" />
+    <node id="62384" type="unregulated" />
+    <node id="62385" type="unregulated" />
+    <node id="62386" type="unregulated" />
+    <node id="62387" type="unregulated" />
+    <node id="62388" type="unregulated" />
+    <node id="62389" type="unregulated" />
+    <node id="62390" type="unregulated" />
+    <node id="62391" type="unregulated" />
+    <node id="62392" type="unregulated" />
+    <node id="62393" type="unregulated" />
+    <node id="62394" type="unregulated" />
+    <node id="62395" type="unregulated" />
+    <node id="62396" type="unregulated" />
+    <node id="62397" type="unregulated" />
+    <node id="62398" type="unregulated" />
+    <node id="62399" type="unregulated" />
+    <node id="62400" type="unregulated" />
+    <node id="62401" type="unregulated" />
+    <node id="62402" type="unregulated" />
+    <node id="62403" type="unregulated" />
+    <node id="62404" type="unregulated" />
+    <node id="62405" type="unregulated" />
+    <node id="62406" type="unregulated" />
+    <node id="62407" type="unregulated" />
+    <node id="62408" type="unregulated" />
+    <node id="62409" type="unregulated" />
+    <node id="62410" type="unregulated" />
+    <node id="62411" type="unregulated" />
+    <node id="62412" tl="62412" type="traffic_light" />
+    <node id="62413" tl="62413" type="traffic_light" />
+    <node id="62414" type="unregulated" />
+    <node id="62415" type="unregulated" />
+    <node id="62416" type="unregulated" />
+    <node id="62417" type="unregulated" />
+    <node id="62418" type="unregulated" />
+    <node id="62419" type="unregulated" />
+    <node id="62420" type="unregulated" />
+    <node id="62421" type="unregulated" />
+    <node id="62422" type="unregulated" />
+    <node id="62423" type="unregulated" />
+    <node id="62424" type="unregulated" />
+    <node id="62425" type="unregulated" />
+    <node id="62426" type="unregulated" />
+    <node id="62427" type="unregulated" />
+    <node id="62428" tl="62428" type="traffic_light" />
+    <node id="62429" type="unregulated" />
+    <node id="62430" type="unregulated" />
+    <node id="62431" type="unregulated" />
+    <node id="62432" type="unregulated" />
+    <node id="62433" type="unregulated" />
+    <node id="62434" type="unregulated" />
+    <node id="62435" type="unregulated" />
+    <node id="62436" tl="62436" type="unregulated" />
+    <node id="62437" tl="62437" type="traffic_light" />
+    <node id="62438" type="unregulated" />
+    <node id="62439" type="unregulated" />
+    <node id="62440" type="unregulated" />
+    <node id="62441" type="unregulated" />
+    <node id="62442" type="unregulated" />
+    <node id="62443" type="unregulated" />
+    <node id="62444" type="unregulated" />
+    <node id="62445" type="unregulated" />
+    <node id="62446" type="unregulated" />
+    <node id="62447" type="unregulated" />
+    <node id="62448" type="unregulated" />
+    <node id="62449" type="unregulated" />
+    <node id="62450" tl="62450" type="traffic_light" />
+    <node id="62451" type="allway_stop" />
+    <node id="62452" type="unregulated" />
+    <node id="62453" type="allway_stop" />
+    <node id="62454" type="allway_stop" />
+    <node id="62455" type="allway_stop" />
+    <node id="62456" type="unregulated" />
+    <node id="62457" type="unregulated" />
+    <node id="62458" type="priority" />
+    <node id="62459" type="unregulated" />
+    <node id="62460" type="unregulated" />
+    <node id="62461" type="priority" />
+    <node id="62462" type="unregulated" />
+    <node id="62463" type="unregulated" />
+    <node id="62464" type="unregulated" />
+    <node id="62465" tl="62465" type="traffic_light" />
+    <node id="62466" tl="62466" type="traffic_light" />
+    <node id="62467" type="unregulated" />
+    <node id="62468" type="unregulated" />
+    <node id="62469" type="unregulated" />
+    <node id="62470" type="unregulated" />
+    <node id="62471" type="unregulated" />
+    <node id="62472" type="unregulated" />
+    <node id="62473" type="unregulated" />
+    <node id="62474" type="unregulated" />
+    <node id="62475" type="unregulated" />
+    <node id="62476" type="unregulated" />
+    <node id="62477" type="unregulated" />
+    <node id="62478" type="priority_stop" />
+    <node id="62479" type="unregulated" />
+    <node id="62480" tl="62480" type="traffic_light" />
+    <node id="62481" type="priority_stop" />
+    <node id="62482" type="unregulated" />
+    <node id="62483" type="unregulated" />
+    <node id="62484" type="priority_stop" />
+    <node id="62485" type="unregulated" />
+    <node id="62486" tl="62486" type="traffic_light" />
+    <node id="62487" tl="62487" type="traffic_light" />
+    <node id="62488" type="unregulated" />
+    <node id="62489" tl="62489" type="traffic_light" />
+    <node id="62490" tl="62490" type="traffic_light" />
+    <node id="62491" type="priority_stop" />
+    <node id="62492" type="unregulated" />
+    <node id="62493" type="unregulated" />
+    <node id="66386" type="unregulated" />
+    <node id="66387" type="unregulated" />
+    <node id="66389" type="unregulated" />
+    <node id="66413" type="unregulated" />
+    <node id="66446" type="priority_stop" />
+    <node id="66447" type="allway_stop" />
+    <node id="66448" type="priority_stop" />
+    <node id="66492" type="unregulated" />
+    <node id="66499" type="unregulated" />
+    <node id="66577" tl="66577" type="traffic_light" />
+    <node id="66587" tl="66587" type="traffic_light" />
+    <node id="66640" tl="66640" type="traffic_light" />
+    <node id="66686" tl="66686" type="traffic_light" />
+    <node id="66688" type="allway_stop" />
+    <node id="66689" tl="66689" type="traffic_light" />
+    <node id="66694" tl="66694" type="traffic_light" />
+    <node id="66697" type="priority" />
+    <node id="66698" type="unregulated" />
+    <node id="66700" type="unregulated" />
+    <node id="66702" type="unregulated" />
+    <node id="66703" type="unregulated" />
+    <node id="66704" tl="66704" type="traffic_light" />
+    <node id="66705" type="allway_stop" />
+    <node id="66706" type="allway_stop" />
+    <node id="66707" type="unregulated" />
+    <node id="66708" type="unregulated" />
+    <node id="66709" type="unregulated" />
+    <node id="66710" type="unregulated" />
+    <node id="66711" type="unregulated" />
+    <node id="66712" type="unregulated" />
+    <node id="66713" type="unregulated" />
+    <node id="66714" tl="66714" type="traffic_light" />
+    <node id="66715" type="unregulated" />
+    <node id="66716" type="unregulated" />
+    <node id="66717" type="unregulated" />
+    <node id="66718" type="allway_stop" />
+    <node id="66726" tl="66726" type="traffic_light" />
+    <node id="66731" tl="66731" type="traffic_light" />
+    <node id="66733" type="unregulated" />
+    <node id="66734" type="unregulated" />
+    <node id="66735" type="unregulated" />
+    <node id="66736" type="unregulated" />
+    <node id="66737" type="unregulated" />
+    <node id="66738" type="unregulated" />
+    <node id="66739" type="unregulated" />
+    <node id="66741" type="unregulated" />
+    <node id="66742" type="unregulated" />
+    <node id="66743" tl="66743" type="traffic_light" />
+    <node id="66744" type="unregulated" />
+    <node id="66745" type="unregulated" />
+    <node id="66746" type="unregulated" />
+    <node id="66747" type="priority_stop" />
+    <node id="67398" type="allway_stop" />
+    <node id="67402" type="unregulated" />
+    <node id="67403" type="unregulated" />
+    <node id="67405" type="unregulated" />
+    <node id="67406" type="unregulated" />
+    <node id="67407" type="unregulated" />
+    <node id="67408" type="unregulated" />
+    <node id="67409" type="unregulated" />
+    <node id="67410" type="unregulated" />
+    <node id="67411" type="priority_stop" />
+</nodes>
