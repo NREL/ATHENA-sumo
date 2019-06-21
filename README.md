@@ -1,1 +1,1 @@
-# ATHENA Modeling: Capacity Expation + Modeling
+# ATHENA Modeling: Capacity Explanation + Modeling
