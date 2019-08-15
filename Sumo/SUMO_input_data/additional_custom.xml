@@ -2,7 +2,7 @@
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
 	<vType id="truck" vClass="truck"/>
 	<vType id="trailer" vClass="trailer"/>
-	<vType id="passenger" vClass="passenger"/>
+	<vType id="passenger" vClass="passenger" accel="10" tau="1"/>
 	<vType id="bus" vClass="bus"/>
 	<busStop endPos="-1" friendlyPos="1" id="A_top_1" lane="A_top_1_0" lines="1" startPos="0"/>
 	<busStop endPos="-1" friendlyPos="1" id="A_top_2" lane="A_top_2_0" lines="1" startPos="0"/>
@@ -46,4 +46,10 @@
 	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_4" lane="park_north_emp_4_0" lines="1" startPos="0"/>
 	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_5" lane="park_north_emp_5_0" lines="1" startPos="0"/>
 	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_6" lane="park_north_emp_6_0" lines="1" startPos="0"/>
+
+	<busStop endPos="-1" friendlyPos="1" id="RAC_drop" lane="RAC_drop_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="RAC_pick" lane="RAC_pick_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="RAC_break_1" lane="RAC_break_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="RAC_break_2" lane="RAC_break_2_0" lines="1" startPos="0"/>
+	
 </additional>
