@@ -47,3 +47,9 @@
 ```bash
    sumo -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --tripinfo-output <FILE>
 ```
+
+#### Generating vehicle trip information including stop durations
+
+```bash
+   sumo -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --tripinfo-output <FILE> --stop-output <FILE>   
+```
