@@ -15,9 +15,13 @@ File System for ATHENA
        * List of files
     - Simulations
        * OutputData
-            + list of sml files
-       * List of ipynb
+            + list of XML files
+       * List of ipynb notebooks:
+            1. .ipynb
+            2. .ipynb
        * List of files
+            1. .csv
+            2. .xml
     - [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo)
     - Environment.yml
 +	.gitignore
