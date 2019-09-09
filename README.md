@@ -1,7 +1,8 @@
 # ATHENA Modeling: Simulation with SUMO
 ### Contributors: 
 Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
-& Joseph Severino: <Joseph.Severino@nrel.gov></p>
+<br>
+& Joseph Severino: <Joseph.Severino@nrel.gov>
 
 ## Type Of Repo: Config/Analysis Repo
 
