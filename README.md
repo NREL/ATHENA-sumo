@@ -1,7 +1,7 @@
-# ATHENA Modeling: Capacity Explanation + Modeling
-
-Contributors: Juliette Ugirumurera : <Juliette.Ugirumurera@nrel.gov>
-& Joseph Severino: <Joseph.Severino@nrel.gov>
+# ATHENA Modeling: Simulation with SUMO
+### Contributors: 
+<p>Juliette Ugirumurera : <Juliette.Ugirumurera@nrel.gov> <br>
+& Joseph Severino: <Joseph.Severino@nrel.gov></p>
 
 ## Type Of Repo: Config/Analysis Repo
 
