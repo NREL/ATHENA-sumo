@@ -6,4 +6,19 @@ Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
 
 ## Type Of Repo: Config/Analysis Repo
 
-The following are contained in this repository
+### The following are contained in this repository
+
+File System for ATHENA
+
+*	SUMO
+  *	SUMO_input_data
+    * List of files
+  *	Simulations
+    * OutputData
+    * List of ipynb
+    *	List of files
+  * README.md
+  *	Environment.yml
+*	.gitignore
+*	README.md
+
