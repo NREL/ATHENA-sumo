@@ -11,14 +11,16 @@ Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
 File System for ATHENA
 
 *	SUMO
+  * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo)
+  *	Environment.yml
   *	SUMO_input_data
     * List of files
   *	Simulations
     * OutputData
     * List of ipynb
     *	List of files
-  * [README.md] (https://duckduckgo.com)
-  *	Environment.yml
+  
+  
 *	.gitignore
 *	README.md
 
