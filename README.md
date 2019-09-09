@@ -14,11 +14,12 @@ File System for ATHENA
     - SUMO_input_data
        * List of files
     - Simulations
-       * OutputData
-            + list of XML files
+       * OutputData: individual trip data to include emissions
+            1. .xml 
+            2. .xml
        * List of ipynb notebooks:
-            1. .ipynb
-            2. .ipynb
+            1. .ipynb (code to generate demand file)
+            2. .ipynb (code to generate output metrics for objective model)
        * List of files
             1. .csv
             2. .xml
