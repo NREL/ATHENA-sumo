@@ -1,6 +1,6 @@
-## Running SUMO and generating an Output
+# Running SUMO and generating an Output
 
-#### Open command terminal after installing SUMO
+### Open command terminal after installing SUMO
 ```html
 if SUMO is not installed please refer to the link below for installation
 ```
@@ -8,19 +8,19 @@ if SUMO is not installed please refer to the link below for installation
       * If you have access to NREL GitHub use this [MAC install](https://github.nrel.gov/jseverin/Sumo/blob/master/README.md)
 2. Windows users: [SUMO for Windows](http://sumo.dlr.de/docs/Installing.html)
 
-#### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
+### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
 
 ```bash
   sumo-gui -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --emission-output <FILE>
 ```
-#### Then convert XML -> CSV
+### Then convert XML -> CSV
 
 ```bash
   python $SUMO_HOME/tools/xml/xml2csv.py <FILE>
   
 ```
 
-#### More Output options (data)
+### More Output options (data)
 
 ```bash
   --full-output <FILE> # Full dump of simulation (caution: may be very large)
@@ -40,13 +40,13 @@ if SUMO is not installed please refer to the link below for installation
   
 ```
 
-#### Generating vehicle trip information including stop durations
+### Generating vehicle trip information including stop durations (RUN this to process Bus route outputs)
 
 ```bash
-   sumo -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --tripinfo-output <FILE> --stop-output <FILE>
+$SUMO_HOME/bin/sumo-gui -n DFW_valid_2.net.xml --additional-files additional_custom.xml -r Bus_and_curb_high_Aug-27-19.xml --step-length 0.25 --time-to-teleport 500 --device.emissions.probability 1 --summary summary.xml --tripinfo-output tripout.xml --stop-output stop_output.xml --eager-insert t
 ```
 
-#### The Above are not all possible simulation outputs. Please see documentation for more information on each and to explore other visualizations/output data.
+### The Above are all possible simulation outputs. Please see documentation for more information on each and to explore other visualizations/output data.
 
 [SUMO output files](https://sumo.dlr.de/wiki/Simulation/Output)
 
@@ -55,8 +55,8 @@ if SUMO is not installed please refer to the link below for installation
 
 ## Running SUMO without gui:
 
-#### same as above, but without "-gui"
+### same as above, but without "-gui"
 
 ```bash
-   sumo -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --tripinfo-output <FILE>
+  $SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_custom.xml -r Bus_and_curb_high_Aug-27-19.xml --step-length 0.25 --time-to-teleport 500 --device.emissions.probability 1 --summary summary.xml --tripinfo-output tripout.xml --stop-output stop_output.xml --eager-insert t
 ```
