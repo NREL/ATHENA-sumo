@@ -4,26 +4,23 @@
 
 ### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
 1. Sample input files can be found the [SUMO_input_files](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Example_Files/SUMO_Input_Files)
-2. Running the simulation with a GUI with no outputs
-```bash
-  sumo-gui -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> 
-```
+
 
 ## Running SUMO without gui (RUN this to process output files!):
 
-3. Running the simulation without a GUI
+2. Running the simulation without a GUI
 ```bash
 $SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_2018-06-11.xml -r trip_2017-12-31.xml  --device.emissions.probability 1 --tripinfo-output trip_output_low.xml --stop-output stop_output_low.xml 
 ```
 ### Then convert XML -> CSV
-4. Convert Outputs to CSV
+3. Convert Outputs to CSV
 ```bash
   python $SUMO_HOME/tools/xml/xml2csv.py <FILE.xml>
   
 ```
 
 ### More Output options (data)
-5. More options
+4. More options
 ```bash
   --full-output <FILE> # Full dump of simulation (caution: may be very large)
   
@@ -42,11 +39,6 @@ $SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_2018-06
   
 ```
 
-### Generating vehicle trip information including stop durations 
-6. Same as above with GUI
-```bash
-$SUMO_HOME/bin/sumo-gui -n DFW_valid_2.net.xml --additional-files additional_2018-06-11.xml -r trip_2017-12-31.xml  --device.emissions.probability 1 --tripinfo-output trip_output_low.xml --stop-output stop_output_low.xml 
-```
 
 ### The Above are all possible simulation outputs. Please see documentation for more information on each and to explore other visualizations/output data.
 
