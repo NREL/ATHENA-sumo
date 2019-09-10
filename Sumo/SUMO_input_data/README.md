@@ -1,6 +1,13 @@
 ## Running SUMO and generating an Output
 
 #### Open command terminal after installing SUMO
+```html
+if SUMO is not installed please refer to the link below for installation
+```
+1. MAC users: [SUMO for MACs](https://sumo.dlr.de/docs/Installing/MacOS_Build.html)
+      * If you have access to NREL GitHub use this [MAC install](https://github.nrel.gov/jseverin/Sumo/blob/master/README.md)
+2. Windows users: [SUMO for Windows](http://sumo.dlr.de/docs/Installing.html)
+
 #### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
 
 ```bash
