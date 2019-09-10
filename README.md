@@ -5,6 +5,8 @@ Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
 & Joseph Severino: <Joseph.Severino@nrel.gov>
 
 ## THIS IS A CONFIG/ANALYSIS REPO
+### Description of REPO
+<p>This repo is holder all code for modeling DFW airport using SUMO simulator and the pipeline into the infrustructure optimization model. It demonstrates how to install, run and derive useful data from SUMO simulator. We will describe the basic files needed to run a simulation and how those files are generated. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
 
 ### The following are contained in this repository
 
