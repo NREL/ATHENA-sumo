@@ -12,7 +12,7 @@ conda env list
 ```linux
 conda activate athena
 ```
-5. It should something like this now in your terminal: 
+5. It should look something like this in your terminal: 
 ```linux
 (athena) jseverin-33734s:ATHENA-siem-sumo jseverin$
 ```
