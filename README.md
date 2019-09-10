@@ -13,6 +13,18 @@ File System for ATHENA
 +	SUMO
     - SUMO_input_data
        * List of files
+            - list of Newtwork files:
+                1. Bus_Aug-15-19.xml
+                2. Bus_routes.xml
+                3. trip_2017-12-31.xml
+                4. trip_2018-06-11.xml
+                5. trip_Policy.xml
+                6. trip_custom.xml
+            - list of Network Files:
+                1. DFW_valid_2.net.xml
+            - list of additional files:
+                1. additional_2018-06-11.xml
+            - [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/SUMO_input_data)
     - Simulations
        * OutputData: individual trip data to include emissions
             - list of output files:
