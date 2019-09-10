@@ -18,5 +18,5 @@ conda activate athena
 ```
 6. To deactivate environment:
 ```linux
-deactivate athena
+conda deactivate 
 ```
