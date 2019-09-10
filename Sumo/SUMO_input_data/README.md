@@ -9,19 +9,26 @@ if SUMO is not installed please refer to the link below for installation
 2. Windows users: [SUMO for Windows](http://sumo.dlr.de/docs/Installing.html)
 
 ### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
-
+3. Running the simulation with a GUI
 ```bash
   sumo-gui -n <network_file.xml> --additional-files <addition_file.xml> -r <trip/route_file.xml> --emission-output <FILE>
 ```
-### Then convert XML -> CSV
 
+## Running SUMO without gui (RUN this to process Bus route outputs!):
+
+4. Running the simulation without a GUI
+```bash
+  $SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_custom.xml -r Bus_and_curb_high_Aug-27-19.xml --step-length 0.25 --time-to-teleport 500 --device.emissions.probability 1 --summary summary.xml --tripinfo-output tripout.xml --stop-output stop_output.xml --eager-insert t
+```
+### Then convert XML -> CSV
+5. Convert Outputs to CSV
 ```bash
   python $SUMO_HOME/tools/xml/xml2csv.py <FILE>
   
 ```
 
 ### More Output options (data)
-
+6. More options
 ```bash
   --full-output <FILE> # Full dump of simulation (caution: may be very large)
   
@@ -40,8 +47,8 @@ if SUMO is not installed please refer to the link below for installation
   
 ```
 
-### Generating vehicle trip information including stop durations (RUN this to process Bus route outputs)
-
+### Generating vehicle trip information including stop durations 
+7. Same as above with GUI
 ```bash
 $SUMO_HOME/bin/sumo-gui -n DFW_valid_2.net.xml --additional-files additional_custom.xml -r Bus_and_curb_high_Aug-27-19.xml --step-length 0.25 --time-to-teleport 500 --device.emissions.probability 1 --summary summary.xml --tripinfo-output tripout.xml --stop-output stop_output.xml --eager-insert t
 ```
@@ -51,12 +58,3 @@ $SUMO_HOME/bin/sumo-gui -n DFW_valid_2.net.xml --additional-files additional_cus
 [SUMO output files](https://sumo.dlr.de/wiki/Simulation/Output)
 
 [SUMO visualizations](https://sumo.dlr.de/wiki/Tools/Visualization)
-
-
-## Running SUMO without gui:
-
-### same as above, but without "-gui"
-
-```bash
-  $SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_custom.xml -r Bus_and_curb_high_Aug-27-19.xml --step-length 0.25 --time-to-teleport 500 --device.emissions.probability 1 --summary summary.xml --tripinfo-output tripout.xml --stop-output stop_output.xml --eager-insert t
-```
