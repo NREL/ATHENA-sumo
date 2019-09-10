@@ -14,18 +14,18 @@ File System for ATHENA
 
 
 - Install_SUMO
-      * README.md
+     * README.md
 - Generate_SUMO_demand
-      * README.md
-      * environment.yml
-      * Ipython notebook
+     * README.md
+     * environment.yml
+     * Ipython notebook
 - Process_SUMO_outputs
-      * README.md
-      * Ipython notebook
+     * README.md
+     * Ipython notebook
 - Example_Files
-      * Prediction File
-      * Folder w/ Sample Inputs
-      * Folder w/ Sample OUTPUTS
+     * Prediction File
+     * Folder w/ Sample Inputs
+     * Folder w/ Sample OUTPUTS
 -	.gitignore
 -	README.md
 
