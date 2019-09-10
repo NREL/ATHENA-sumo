@@ -1,4 +1,5 @@
 # SETUP CONDA ENVIRONMENT
+
 1. In your terminal load  environment.yml file
 ```linux
 conda env create -f environment.yml
@@ -16,7 +17,13 @@ conda activate athena
 ```linux
 (athena) jseverin-33734s:ATHENA-siem-sumo jseverin$
 ```
-6. To deactivate environment:
+6. To generate demand you will need ot run the notebook (DFW_gen_flow.ipynb)
+```linux
+jupyter notebook
+```
+
+7. To deactivate environment:
 ```linux
 conda deactivate 
 ```
+
