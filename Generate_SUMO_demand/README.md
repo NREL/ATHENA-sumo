@@ -21,6 +21,7 @@ conda activate athena
 ```linux
 jupyter notebook
 ```
+> Once in the notebook, you will want to run all the cells refer to 
 
 7. To deactivate environment:
 ```linux
