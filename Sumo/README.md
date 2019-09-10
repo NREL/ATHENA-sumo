@@ -1,5 +1,5 @@
 # SETUP CONDA ENVIRONMENT
-1. In your terminal load this .yml file
+1. In your terminal load  environment.yml file
 ```linux
 conda env create -f environment.yml
 ```
