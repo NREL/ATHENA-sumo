@@ -54,10 +54,10 @@ File System for ATHENA
 use this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo) for instructions
     
 ### 2. Select day and generate Demand
-use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) *Section 1* for
+use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) ***Section 1*** for
 instructions 
 ### 3. Run SUMO simulation
 use this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/SUMO_input_data)
 ### 4. Process Outputs 
-use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) *Section 2* for  
+use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) ***Section 2*** for  
 instructions 
