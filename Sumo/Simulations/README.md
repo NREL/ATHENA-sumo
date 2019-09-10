@@ -1,1 +1,4 @@
-# How Generate Demand and Process Simulation Outputs
+# SECTION 1: GENERATE DEMAND
+
+
+# SECTION 2: PROCESS OUTPUTS
