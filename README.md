@@ -45,3 +45,6 @@ File System for ATHENA
 +	.gitignore
 +	README.md
 
+## HOW TO USE THIS REPO
+
+![WorkFlow!](Athena_Workflow.png "How to use this repo")
