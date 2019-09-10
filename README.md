@@ -1,10 +1,10 @@
-# ATHENA Modeling: Simulation with SUMO
+# ATHENA MODELING: SIMULATION WITH SUMO
 ### Contributors: 
 Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
 <br>
 & Joseph Severino: <Joseph.Severino@nrel.gov>
 
-## Type Of Repo: Config/Analysis Repo
+## THIS IS A CONFIG/ANALYSIS REPO
 
 ### The following are contained in this repository
 
@@ -48,3 +48,14 @@ File System for ATHENA
 ## HOW TO USE THIS REPO
 
 ![WorkFlow!](Athena_Workflow.png "How to use this repo")
+
+
+### 1. Setup Conda Environment
+    * use this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo) for instructions
+    
+### 2. Select day and generate Demand
+    * use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) Section 1 for instructions 
+### 3. Run SUMO simulation
+    * use this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/SUMO_input_data)
+### 4. Process Outputs 
+    * use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations) Section 2 for instructions 
