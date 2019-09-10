@@ -23,6 +23,7 @@ jupyter notebook
 ```
 # GENERATE DEMAND
 > Once in the notebook, you will want to run all the cells 
+and use the [DFW_prediction_file](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Example_Files) to build your demand
 7. paste link into chrome browser or use the window that opens automatically for you
 8. Run all cells of code
 9. In one of the cells you will find TOP 10, BOTTOM 10 and MIDDLE 10 days of volume. These are here to help you decide the type of day you want to run
