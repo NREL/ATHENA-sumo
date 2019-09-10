@@ -38,7 +38,7 @@ mean_dictionary['gallons']['am']
 Note: this will output a matrix of all the terminals and any combination of routes between them with their respective fuel consumption in gallons during the AM peak
 ```
 4. For more options than 'gallons' and 'am', use dictionary below:
-```json
+```python
 mean_dictionary{
                 'gallons':{
                           'am': DataFrame, # Am peak
