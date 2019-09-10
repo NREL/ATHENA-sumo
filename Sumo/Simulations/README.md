@@ -20,8 +20,9 @@ Note: this will generate the volume for December 31, 2017
 model_to_sumo(day,date,False)
 ```
 ```html
-Note: "day" and "date" aurguments are already set from above. The third aurgument is for a Policy reallocation. 
-"False" is the default and will not run the policy. Other options are any float between [0,1]
+Note: "day" and "date" aurguments are already set from above. The third aurgument is 
+for a Policy reallocation. "False" is the default and will not run the policy. Other options 
+are any float between [0,1]
 ```
 9. After running your .XML will be stored in the input Folder
 10. Run last cells to get updated additional XML files for SUMO. These are there to designated the stops and vehicle types.
