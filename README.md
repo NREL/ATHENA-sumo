@@ -39,7 +39,7 @@ File System for ATHENA
             2. Output_for_objective_function.ipynb (code to generate output metrics for objective model)
        * List of files
             1. athena_sumo_v1.csv (demand prediction per hour per terminal)
-       * =[README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations)
+       * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo/Simulations)
     - [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Sumo)
     - Environment.yml
 +	.gitignore
