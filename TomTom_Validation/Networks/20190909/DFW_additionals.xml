@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+	<vType id="truck" vClass="truck"/>
+	<vType id="trailer" vClass="trailer"/>
+	<vType id="passenger" vClass="passenger"/>
+	<vType id="bus" vClass="bus"/>
+	<busStop endPos="-1" friendlyPos="1" id="A_top_1" lane="A_top_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="A_top_2" lane="A_top_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="A_bot_1" lane="A_bot_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="A_bot_2" lane="A_bot_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="B_top_1" lane="B_top_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="B_top_2" lane="B_top_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="B_top_3" lane="B_top_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_top_1" lane="C_top_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_top_2" lane="C_top_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_top_3" lane="C_top_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_bot_1" lane="C_bot_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_bot_2" lane="C_bot_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="C_bot_3" lane="C_bot_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="D_top_1" lane="D_top_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="D_bot_1" lane="D_bot_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="E_top_1" lane="E_top_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="E_top_2" lane="E_top_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="E_bot_1" lane="E_bot_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="E_bot_2" lane="E_bot_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_term_1" lane="park_south_term_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_term_2" lane="park_south_term_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_term_3" lane="park_south_term_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_term_4" lane="park_south_term_4_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_emp_1" lane="park_south_emp_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_emp_2" lane="park_south_emp_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_south_emp_3" lane="park_south_emp_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_1" lane="park_north_emp_1_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_2" lane="park_north_emp_2_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_3" lane="park_north_emp_3_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_4" lane="park_north_emp_4_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_5" lane="park_north_emp_5_0" lines="1" startPos="0"/>
+	<busStop endPos="-1" friendlyPos="1" id="park_north_emp_6" lane="park_north_emp_6_0" lines="1" startPos="0"/>
+</additional>

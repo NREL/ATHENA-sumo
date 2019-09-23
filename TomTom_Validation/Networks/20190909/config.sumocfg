@@ -1,0 +1,6 @@
+<configuration>
+   <input>
+       <net-file value="DFW.net.xml"/>
+       <additional-files value="DFW_additionals.xml"/>
+   </input>
+</configuration>
