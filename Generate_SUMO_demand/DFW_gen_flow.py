@@ -27,6 +27,9 @@ import seaborn as sns
 from datetime import datetime
 
 def month(string):
+    '''
+    converts months to number category
+    '''
     string = string.lower()
     months = ['january','febuary','march','april','may','june','july','august','september','october','november','december']
     monthNumber = months.index(string) + 1
@@ -34,12 +37,18 @@ def month(string):
 
 
 def day(string):
+    """
+    converts day of week to number category
+    """
     string = string.lower()
     days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     dayNumber = days.index(string) + 1
     return dayNumber
 
 def addDayOfWeek(demand):
+    """
+    Adds Day of week categorical variable to dataFrame
+    """
     dw = []
     for i, row in enumerate(demand['scheduled_fight_time']):
         today = datetime_object = datetime.strptime(row, '%Y-%m-%d %H:%M:%S')
@@ -49,12 +58,18 @@ def addDayOfWeek(demand):
 
 
 def extractDate(demand):
+    """
+    extracts data info ffrom the timestamp columns
+    """
     date = []
     for i, row in enumerate(demand['scheduled_fight_time']):
         date.append(row.split()[0])
     demand['date'] = date # adding a date without timestamp column to aggregate over
 
 def formatDate(df):
+    """
+    formats the date to year - month = day only and makes it the index for better plotting
+    """
     t =[]
     for i in df.index:
         time = (datetime.strptime(i,"%Y-%m-%d"))
@@ -63,6 +78,9 @@ def formatDate(df):
     df.index = df['date']
 
 def buildTopBottomMedianDays(demand):
+    """
+    Sorts the DataFrames to see the top volume, bottom volume and median volume days
+    """
     day_df = demand.groupby('date').sum()
     sorted_top10 = day_df.sort_values(['total_pass']).tail(10)
     sorted_bot10 = day_df.sort_values(['total_pass']).head(10)
@@ -72,6 +90,9 @@ def buildTopBottomMedianDays(demand):
     return sorted_top10, sorted_bot10, median_days, sort_all
 
 def avg_day_month(demand,d,m):
+    """
+    To generate a average day based of the month and the day of week this will do just that
+    """
     d = day(d)
     m = month(m)
     agg = demand.loc[(demand['month'] == m) & (demand['day_of_week'] == d)]
@@ -79,6 +100,9 @@ def avg_day_month(demand,d,m):
     return agg
 
 def top_day_month(demand,d,m,p):
+    """
+    Generates a sample day based off the specified quantile (p) and day of week and month
+    """
     d = day(d)
     m = month(m)
     agg = demand.loc[(demand['month'] == m) & (demand['day_of_week'] == d)]
@@ -86,11 +110,18 @@ def top_day_month(demand,d,m,p):
     return agg
 
 def pick_day(demand, date):
+    """
+    generates the exact day you select from the format YYYY-MM-DD
+    """
     day = demand.loc[(demand['date'] == date)]
     day.set_index('time',inplace=True)
     return day, date
 
 def plot_vol_by_type(df):
+    """
+    Plots the Volume of vehicles going to each terminal, parking lot and pass through as time series
+
+    """
     import matplotlib.pyplot as plt
     import seaborn as sns
     plt.figure(figsize=(15,6))
@@ -111,6 +142,9 @@ def plot_vol_by_type(df):
     plt.show()
 
 def plot_tot_vs_term(df):
+    """
+    Plots vehicle volumes of parking pass through and aggregates terminal volume through day as a time series
+    """
     import matplotlib.pyplot as plt
     import seaborn as sns
 
@@ -131,6 +165,9 @@ def plot_tot_vs_term(df):
     plt.show()
 
 def plot_pie_all(day):
+    """
+    plots two a pie charts of the distribution of vehiles by terminal, parking and pass through
+    """
     plt.figure(figsize=(20,8))
 
     labels = ['A','B','C','D','E','Pass Through','Parking']
@@ -160,10 +197,23 @@ def plot_pie_all(day):
     plt.show()
 
 def convert_num_2_terminal(num):
+    """
+    convert the index numbe to terminal to be used to name a vehicles
+    """
     term_dict = {0:"A",1:"B",2:"C",3:"D",4:"E"}
     return term_dict[num]
 
 def model_to_sumo(this_folder,df,date,policy = True,obey=.5):
+    """
+    Generates XML demand file with all trips. Trips and uniformally distributed over the 30 min period given by the operational model.
+    55% come from the North plaze and 45 from South. This can changed. 80% exit the same plaza they came from and 20% the opposite. that can be changed
+    If vehicle was a pass through than 80% exit the opposite side. A Policy is optional. Policy has the option obey whic sets the percentage of
+    individuals that comply with this policy. The policy assess the future half hour and knows  from the model what the highes and lowest
+    Volume termials will  be with some confidence. USing that information, it redistributes the volume from the highest volume terminal to the
+    lowest volume termianl based on the obey aurgument. Remember if you reallocate all (obey=1) to a new terminal you are only moving the congestion to a
+    new terminal to be congested  and that is in addition to what is already currently going there.
+
+    """
     if policy:
         pamt = str(obey*100)
         file_name = 'trip_Policy_' + pamt + "_"+ date+ ".xml"
@@ -342,6 +392,10 @@ def model_to_sumo(this_folder,df,date,policy = True,obey=.5):
         f.write(minidom.parseString(ET.tostring(routes_custom)).toprettyxml(encoding="utf-8"))
 
 def create_additional_file(this_folder,stop_dict,date):
+    """
+    creates an additional file to used by SUMO to know where and what the names of the stop IDs are for the curbside and RAC buses. If this
+    is not generated you get an error with SUMO stating vType is not defined and BusStop not defined
+    """
     additional = Element('additional')
     additional.set('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance')
     additional.set('xsi:noNamespaceSchemaLocation', "http://sumo.dlr.de/xsd/additional_file.xsd")
