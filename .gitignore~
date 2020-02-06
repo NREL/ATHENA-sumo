@@ -1,6 +1,3 @@
-*.DS_Store
-*#
-*~
-*.ipynb_checkpoints
-Sumo/Network_Preprocessing/Data/poly_combined/
-Sumo/Network_Preprocessing/Data/poly_combined/*
+__pycache__
+__pycache__/*
+.D_Store
