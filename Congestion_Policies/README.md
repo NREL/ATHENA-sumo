@@ -20,4 +20,4 @@
 
 Now are ready do run some code!
 
-## STEP 3: Run Mast Function in ** Master_Function.ipynb **
+## STEP 3: Run Mast Function in <bold> Master_Function.ipynb </bold>
