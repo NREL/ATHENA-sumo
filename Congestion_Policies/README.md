@@ -24,13 +24,28 @@ Now are ready do run some code!
 > **Master_Function.ipynb**
 
 ## Step 4: Move Demand to Eagle
+in you current directory
 > ```linux
 > scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/inputData/.
 > ```
 
 ## STEP 5: Run SUMO simulation
+
 - Interactive Node
->> ```linux
+> ```linux
+> ssh eagle.hpc.nrel.gov
+>> cd /project/athena/sumo_data/inputData/
 >> srun --time=30 --account=athena --ntasks=1 --pty $SHELL
->> 
+>> export SUMO_HOME="Something here"
+>> sumo -n DFW2.net.xml --additional-files addition-file -r trips.xml 
 >> ```
+
+- As a batch file
+```linux
+ssh eagle.hpc.nrel.gov
+cd /project/athena/sumo_data/inputData/
+chmod u+x <YourBatch.batch>
+./<YourBatch.batch>
+```
+
+## STEP 6: 
