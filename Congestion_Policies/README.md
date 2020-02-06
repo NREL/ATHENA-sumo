@@ -12,3 +12,8 @@
 > ../Example_Files/athena_sumo_v1.csv
 > ```
 ## STEP 2: Setup Enviroment
+
+> ```git
+> conda env create -f AthenaSumoEnviroment.yml 
+> conda activate AthenaSumo
+> ```
