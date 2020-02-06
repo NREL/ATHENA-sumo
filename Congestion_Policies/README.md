@@ -25,7 +25,7 @@ Now are ready do run some code!
 >  [**Master_Function.ipynb**](Master_Function.ipynb)
 
 ## Step 4: Move Demand to Eagle
-in you current directory
+Onc e you have generated your XML trips file, you need to move it Eagle and run it on HPC. To do this you can run the code below. Be sure to replace {NameOfYourOutputDemand.xml} with the files name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
 scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/inputData/.
 ```
