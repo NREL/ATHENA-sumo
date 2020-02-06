@@ -22,7 +22,7 @@ conda activate AthenaSumo
 Now are ready do run some code!
 
 ## STEP 3: Run Mast Function in  
->  [**Master_Function.ipynb**](/Master_Function.ipynb)
+>  [**Master_Function.ipynb**](Master_Function.ipynb)
 
 ## Step 4: Move Demand to Eagle
 in you current directory
