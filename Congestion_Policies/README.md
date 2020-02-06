@@ -27,3 +27,10 @@ Now are ready do run some code!
 > ```linux
 > scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/inputData/.
 > ```
+
+## STEP 5: Run SUMO simulation
+- Interactive Node
+>> ```linux
+>> srun --time=30 --account=athena --ntasks=1 --pty $SHELL
+>> 
+>> ```
