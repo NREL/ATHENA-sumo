@@ -7,9 +7,9 @@
 > /projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv
 > ```
 
-#### Place this file under in:
+#### And place this file under in:
 > ```linux  
-> ../Example_Files/athena_sumo_v1.csv
+> scp eagle.hpc.nrel.gov:/projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv ../Example_Files/athena_sumo_v1.csv
 > ```
 ## STEP 2: Setup Enviroment
 
