@@ -22,3 +22,8 @@ Now are ready do run some code!
 
 ## STEP 3: Run Mast Function in  
 > **Master_Function.ipynb**
+
+## Step 4: Move Demand to Eagle
+> ```linux
+> scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/inputData/.
+> ```
