@@ -2,7 +2,7 @@
 
 ## STEP 1: Ensure you have all dependencies
 
-All of the demand is driven by the CTA predictive model. This demand series is located on **Eagle** if it is not currently contained in the repo. It's location on Eagle is as follows:
+All of the demand is driven by the CTA predictive model. This demand timeseries is located on **Eagle**, if it is not currently contained in this repo. It's location on Eagle is as follows:
 ```linux  
 /projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv
 ```
@@ -19,15 +19,16 @@ conda env create -f AthenaSumoEnviroment.yml
 conda activate AthenaSumo
 ```
 
-Now are ready do run some code!
+Now you are ready do run experiments!
 
 ## STEP 3: Run Mast Function in  
+This is the .ipynb that generates the Trips demand file.
 >  [**Master_Function.ipynb**](Master_Function.ipynb)
 
 ## Step 4: Move Demand to Eagle
-Onc e you have generated your XML trips file, you need to move it Eagle and run it on HPC. To do this you can run the code below. Be sure to replace {NameOfYourOutputDemand.xml} with the files name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
+Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to replace {NameOfYourOutputDemand.xml} with the files name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
-scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/inputData/.
+scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/input_files/Trips/.
 ```
 
 ## STEP 5: Run SUMO simulation
@@ -35,9 +36,9 @@ scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.
 - Interactive Node
 ```linux
 ssh eagle.hpc.nrel.gov
-cd /project/athena/sumo_data/inputData/
+cd /project/athena/sumo_data/input_files/
 srun --time=30 --account=athena --ntasks=1 --pty $SHELL
-export SUMO_HOME="Something here"
+export SUMO_HOME="/projects/athena/sumo-installation/dist/sumo-git"
 sumo -n DFW2.net.xml --additional-files addition-file -r trips.xml 
 ```
 
