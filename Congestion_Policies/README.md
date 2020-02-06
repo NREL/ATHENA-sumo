@@ -7,7 +7,7 @@
 > /projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv
 > ```
 
-#### And place this file under in:
+#### And place this file under:
 > ```linux  
 > scp eagle.hpc.nrel.gov:/projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv ../Example_Files/athena_sumo_v1.csv
 > ```
@@ -17,3 +17,7 @@
 > conda env create -f AthenaSumoEnviroment.yml 
 > conda activate AthenaSumo
 > ```
+
+Now are ready do run some code!
+
+## STEP 3: Run Mast Function in ** Master_Function.ipynb **
