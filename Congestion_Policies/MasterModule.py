@@ -19,8 +19,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
 from datetime import datetime
-sys.path.insert(0, os.path.abspath('../Generate_SUMO_demand/'))
-import DFW_gen_flow as gf
+
 import ipywidgets as widgets
 from ipywidgets import interact, interactive, fixed, interact_manual
 from ipywidgets import ToggleButtons
@@ -593,7 +592,7 @@ def create_sumo_demand_limo_curbside(people,
                     p = end_weight
                 end = np.random.choice(ends,p=p)
                 trip = Element('trip')
-                trip.set('id', column + '_' + str(count))
+                trip.set('id', column + '_Limo_' + str(count))
                 trip.set('type', 'passenger')
                 trip.set('color', "#bb0000")
                 trip.set('depart',str(time))
