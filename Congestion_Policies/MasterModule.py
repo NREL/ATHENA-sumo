@@ -102,7 +102,7 @@ def cars_to_people(df,peoplePerCar=1.7,percentOfTransit=.005):
     for col in columns:
         tmp_people = []
         for row in df[col]:
-            tmp_people.append(round((row * peoplePerCar/(1-percentOfTransit))))
+            tmp_people.append((row * peoplePerCar/(1-percentOfTransit)))
         tmp_df[col + "_people"] = tmp_people
     depart_columns = []
     arrive_columns = []

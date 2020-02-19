@@ -1161,6 +1161,39 @@
 	</trip>
 	
 	
+	<trip color="#bb0000" depart="3" departLane="best" departSpeed="max" from="South_1" id="pass_5" to="North_Exit" type="passenger"/>
+	
+	
+	<trip color="#bb0000" depart="50" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_A_people_passenger_1" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_bot_2" duration="62" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="63" departLane="best" departSpeed="max" from="South_Plaza" id="Depart_A_people_passenger_44" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_2" duration="148" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="78" departLane="best" departSpeed="max" from="North_1" id="Arrive_D_people_passenger_31" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_depart_2" duration="272" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="116" departLane="best" departSpeed="max" from="South_1" id="pass_9" to="North_Exit" type="passenger"/>
+	
+	
 	<trip color="#4263f5" depart="120" departPos="last" departSpeed="max" from="Bus_start" id="B1" to="Bus_start" type="bus">
 		
 		
@@ -2142,7 +2175,106 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="157" departLane="best" departSpeed="max" from="South_Plaza" id="pass_8" to="North_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="126" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_A_people_passenger_2" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_1" duration="39" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="128" departLane="best" departSpeed="max" from="South_Plaza" id="pass_4" to="North_Exit" type="passenger"/>
+	
+	
+	<trip color="#bb0000" depart="145" departLane="best" departSpeed="max" from="South_1" id="Arrive_C_people_passenger_21" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_2" duration="49" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="158" departLane="best" departSpeed="max" from="North_1" id="Arrive_C_people_passenger_24" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_1" duration="90" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="162" departLane="best" departSpeed="max" from="North_1" id="Arrive_A_people_passenger_8" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_bot_3" duration="184" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="162" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_E_people_passenger_37" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_top_1" duration="231" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="172" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_E_people_passenger_57" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_2" duration="27" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="186" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_B_people_passenger_9" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_2" duration="53" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="190" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_C_people_passenger_23" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_2" duration="29" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="193" departLane="best" departSpeed="max" from="South_1" id="Arrive_B_people_passenger_13" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_3" duration="73" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="196" departLane="best" departSpeed="max" from="South_1" id="Arrive_D_people_passenger_26" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_2" duration="119" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="217" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_D_people_passenger_27" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="196" parking="true"/>
+		
+	
+	</trip>
 	
 	
 	<trip color="#4263f5" depart="240" departPos="last" departSpeed="max" from="Bus_start" id="C1" to="Bus_start" type="bus">
@@ -3124,9 +3256,6 @@
 		
 	
 	</trip>
-	
-	
-	<trip color="#bb0000" depart="292" departLane="best" departSpeed="max" from="South_1" id="pass_5" to="North_Exit" type="passenger"/>
 	
 	
 	<trip color="red" depart="300" departPos="last" departSpeed="max" from="E_bot_2" id="EMP-6EC300" to="E_bot_2" type="bus">
@@ -4290,6 +4419,51 @@
 	</trip>
 	
 	
+	<trip color="#bb0000" depart="362" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_D_people_passenger_53" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_depart_2" duration="149" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="388" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_C_people_passenger_19" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_3" duration="126" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="394" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_E_people_passenger_59" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="E_top_3" duration="75" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="404" departLane="best" departSpeed="max" from="South_1" id="Arrive_C_people_passenger_18" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_1" duration="99" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="412" departLane="best" departSpeed="max" from="North_1" id="Arrive_B_people_passenger_10" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_2" duration="343" parking="true"/>
+		
+	
+	</trip>
+	
+	
 	<trip color="#4263f5" depart="480" departPos="last" departSpeed="max" from="Bus_start" id="E1" to="Bus_start" type="bus">
 		
 		
@@ -5271,7 +5445,13 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="539" departLane="best" departSpeed="max" from="North_Plaza" id="pass_6" to="South_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="513" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_D_people_passenger_32" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="330" parking="true"/>
+		
+	
+	</trip>
 	
 	
 	<trip color="#4263f5" depart="600" departPos="last" departSpeed="max" from="Bus_start" id="A2" to="Bus_start" type="bus">
@@ -6435,10 +6615,16 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="633" departLane="best" departSpeed="max" from="North_1" id="pass_10" to="South_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="603" departLane="best" departSpeed="max" from="South_1" id="Arrive_A_people_passenger_6" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="A_bot_3" duration="61" parking="true"/>
+		
+	
+	</trip>
 	
 	
-	<trip color="#bb0000" depart="664" departLane="best" departSpeed="max" from="North_1" id="pass_2" to="South_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="671" departLane="best" departSpeed="max" from="North_1" id="pass_10" to="South_Exit" type="passenger"/>
 	
 	
 	<trip color="#4263f5" depart="720" departPos="last" departSpeed="max" from="Bus_start" id="B2" to="Bus_start" type="bus">
@@ -7417,6 +7603,87 @@
 		
 		
 		<stop busStop="RAC_break_1" duration="90" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="724" departLane="best" departSpeed="max" from="South_1" id="Arrive_D_people_passenger_25" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="67" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="740" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_E_people_passenger_33" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_1" duration="49" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="766" departLane="best" departSpeed="max" from="North_1" id="Arrive_D_people_passenger_28" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="22" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="780" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_B_people_passenger_11" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="B_top_1" duration="138" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="784" departLane="best" departSpeed="max" from="North_1" id="Arrive_A_people_passenger_5" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_1" duration="61" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="802" departLane="best" departSpeed="max" from="South_1" id="Depart_E_people_passenger_58" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_top_3" duration="53" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="815" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_B_people_passenger_12" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_2" duration="66" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="826" departLane="best" departSpeed="max" from="North_1" id="Arrive_D_people_passenger_29" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_service" duration="46" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="829" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_D_people_passenger_54" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="37" parking="true"/>
 		
 	
 	</trip>
@@ -8403,6 +8670,15 @@
 	</trip>
 	
 	
+	<trip color="#bb0000" depart="856" departLane="best" departSpeed="max" from="South_1" id="Arrive_E_people_passenger_35" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_top_1" duration="58" parking="true"/>
+		
+	
+	</trip>
+	
+	
 	<trip color="red" depart="900" departPos="last" departSpeed="max" from="E_bot_2" id="EMP-6EC900" to="E_bot_2" type="bus">
 		
 		
@@ -8578,6 +8854,15 @@
 		
 		
 		<stop busStop="E_top_1" duration="120" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="907" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_B_people_passenger_14" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_top_2" duration="177" parking="true"/>
 		
 	
 	</trip>
@@ -9564,7 +9849,88 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="1073" departLane="best" departSpeed="max" from="North_1" id="pass_7" to="North_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="963" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_E_people_passenger_40" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_3" duration="123" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="980" departLane="best" departSpeed="max" from="North_1" id="Depart_B_people_passenger_47" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_1" duration="333" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="988" departLane="best" departSpeed="max" from="North_1" id="pass_6" to="South_Exit" type="passenger"/>
+	
+	
+	<trip color="#bb0000" depart="992" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_D_people_passenger_55" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="D_service" duration="39" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1007" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_C_people_passenger_22" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_1" duration="144" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1011" departLane="best" departSpeed="max" from="North_1" id="Arrive_A_people_passenger_4" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_bot_1" duration="20" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1033" departLane="best" departSpeed="max" from="South_1" id="Depart_E_people_passenger_60" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_2" duration="82" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1037" departLane="best" departSpeed="max" from="South_1" id="Arrive_D_people_passenger_30" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_depart_2" duration="76" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1051" departLane="best" departSpeed="max" from="South_1" id="Arrive_E_people_passenger_39" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_3" duration="23" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1058" departLane="best" departSpeed="max" from="North_1" id="Depart_A_people_passenger_41" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_1" duration="183" parking="true"/>
+		
+	
+	</trip>
 	
 	
 	<trip color="#4263f5" depart="1080" departPos="last" departSpeed="max" from="Bus_start" id="E2" to="Bus_start" type="bus">
@@ -10548,6 +10914,18 @@
 	</trip>
 	
 
+	<trip color="#bb0000" depart="1157" departLane="best" departSpeed="max" from="South_1" id="Depart_B_people_passenger_45" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_1" duration="112" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1166" departLane="best" departSpeed="max" from="North_1" id="pass_7" to="South_Exit" type="passenger"/>
+	
+	
 	<trip color="red" depart="1200" departPos="last" departSpeed="max" from="E_bot_2" id="EMP-6EC1200" to="E_bot_2" type="bus">
 		
 		
@@ -10728,10 +11106,100 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="1321" departLane="best" departSpeed="max" from="South_Plaza" id="pass_1" to="South_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="1231" departLane="best" departSpeed="max" from="South_Plaza" id="pass_1" to="North_Exit" type="passenger"/>
 	
 	
-	<trip color="#bb0000" depart="1410" departLane="best" departSpeed="max" from="South_Plaza" id="pass_9" to="North_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="1272" departLane="best" departSpeed="max" from="South_1" id="pass_2" to="North_Exit" type="passenger"/>
+	
+	
+	<trip color="#bb0000" depart="1308" departLane="best" departSpeed="max" from="South_Plaza" id="Depart_B_people_passenger_46" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_1" duration="188" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1316" departLane="best" departSpeed="max" from="North_1" id="Depart_C_people_passenger_51" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_bot_2" duration="11" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1384" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_C_people_passenger_20" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_bot_1" duration="29" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1406" departLane="best" departSpeed="max" from="South_1" id="Depart_D_people_passenger_56" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="D_arrive_1" duration="43" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1407" departLane="best" departSpeed="max" from="North_1" id="Arrive_E_people_passenger_34" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="E_top_1" duration="129" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1419" departLane="best" departSpeed="max" from="North_1" id="Depart_C_people_passenger_49" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_bot_3" duration="22" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1433" departLane="best" departSpeed="max" from="North_1" id="Arrive_E_people_passenger_36" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_3" duration="62" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1440" departLane="best" departSpeed="max" from="South_Plaza" id="Depart_B_people_passenger_48" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="B_top_3" duration="37" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1445" departLane="best" departSpeed="max" from="North_Plaza" id="Arrive_A_people_passenger_3" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_2" duration="84" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1463" departLane="best" departSpeed="max" from="North_1" id="Depart_C_people_passenger_52" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_top_3" duration="44" parking="true"/>
+		
+	
+	</trip>
 	
 	
 	<trip color="red" depart="1500" departPos="last" departSpeed="max" from="E_bot_2" id="EMP-6EC1500" to="E_bot_2" type="bus">
@@ -10914,10 +11382,82 @@
 	</trip>
 	
 	
-	<trip color="#bb0000" depart="1707" departLane="best" departSpeed="max" from="South_Plaza" id="pass_4" to="North_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="1519" departLane="best" departSpeed="max" from="South_Plaza" id="pass_8" to="North_Exit" type="passenger"/>
 	
 	
-	<trip color="#bb0000" depart="1778" departLane="best" departSpeed="max" from="North_Plaza" id="pass_3" to="South_Exit" type="passenger"/>
+	<trip color="#bb0000" depart="1555" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_A_people_passenger_7" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_2" duration="104" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1607" departLane="best" departSpeed="max" from="North_1" id="Depart_C_people_passenger_50" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_bot_1" duration="38" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1626" departLane="best" departSpeed="max" from="North_1" id="Arrive_B_people_passenger_15" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="B_top_1" duration="22" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1633" departLane="best" departSpeed="max" from="North_Plaza" id="Depart_A_people_passenger_43" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="A_top_2" duration="57" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1664" departLane="best" departSpeed="max" from="South_Plaza" id="Arrive_C_people_passenger_17" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="C_bot_2" duration="112" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1686" departLane="best" departSpeed="max" from="South_1" id="Arrive_E_people_passenger_38" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="E_bot_1" duration="70" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1686" departLane="best" departSpeed="max" from="North_Plaza" id="pass_3" to="North_Exit" type="passenger"/>
+	
+
+	<trip color="#bb0000" depart="1690" departLane="best" departSpeed="max" from="South_1" id="Depart_A_people_passenger_42" to="South_Exit" type="passenger">
+		
+		
+		<stop busStop="A_bot_1" duration="16" parking="true"/>
+		
+	
+	</trip>
+	
+	
+	<trip color="#bb0000" depart="1759" departLane="best" departSpeed="max" from="North_1" id="Arrive_B_people_passenger_16" to="North_Exit" type="passenger">
+		
+		
+		<stop busStop="B_bot_2" duration="18" parking="true"/>
+		
+	
+	</trip>
 	
 
 	<trip color="red" depart="1800" departPos="last" departSpeed="max" from="E_bot_2" id="EMP-6EC1800" to="E_bot_2" type="bus">
