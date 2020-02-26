@@ -67,10 +67,12 @@ def distributeParking(demand,columns):
     portionOfParking = []
     for i,parking in enumerate(tqdm_notebook(demand['parking'])):
         length = len(columns)
-        rowParkingValue = np.around(parking/length)
+        rowParkingValue = parking/length
+
         portionOfParking.append(rowParkingValue)
     for col in columns:
         demand[col] = np.add(demand[col],portionOfParking)
+
     return demand
 
 def create_depart_arrive(day_demand,
@@ -84,8 +86,8 @@ def create_depart_arrive(day_demand,
         tmp_arrival = []
         tmp_departure = []
         for row in day_demand[col]:
-            tmp_arrival.append(math.floor(row * percent_of_arrivals))
-            tmp_departure.append(math.ceil(row * percent_of_departure))
+            tmp_arrival.append(row * percent_of_arrivals)
+            tmp_departure.append(row * percent_of_departure)
 
         cars['Arrive_' + col] = tmp_arrival
         cars['Depart_' + col] = tmp_departure
