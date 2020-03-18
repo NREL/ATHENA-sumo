@@ -14,7 +14,7 @@ Once you have activated ```athena_sumo``` environment you will ```cd``` into ```
 cd ATHENA-siem-sumo/Congestion_Policies/
 jupyter notebook
 ```
-> NOTE: this will ensure your notebook is in the correct kernal. If not, change your kernal in the notebook to reflect the environment you just createed.
+> NOTE: this will ensure your notebook is in the correct kernal. If not, change your kernal in the notebook to reflect the environment you just created.
 
 
 
