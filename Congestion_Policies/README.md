@@ -1,5 +1,12 @@
 # This folder has code for creating simulation for different scenarios and congestion policies
 
+## STEP 0: Clone REPO and begin Congestion Policies
+In a directory that you want ATHENA-Sumo to be:
+```linux  
+git clone https://github.com/NREL/ATHENA-sumo.git
+cd ATHENA-siem-sumo/Congestion_Policies/
+```
+
 ## STEP 1: Ensure you have all dependencies
 
 All of the demand is driven by the CTA predictive model. This demand timeseries is located on **Eagle**, if it is not currently contained in this repo. It's location on Eagle is as follows:
