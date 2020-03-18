@@ -20,7 +20,7 @@ jupyter notebook
 
 ## STEP 1: Ensure you have all dependencies
 
-All of the demand is driven by the CTA predictive model. This demand timeseries should be in this repo. Howevr, if it is not there is a copy on **Eagle**. It's location on Eagle is as follows:
+All of the demand is driven by the CTA predictive model. This demand timeseries should be in this repo. However, if it is not (skip to STEP 2 if you have it), there is a copy on **Eagle**. It's location on Eagle is as follows:
 ```linux  
 /projects/athena/sumo_data/predicted_demand/athena_sumo_v1.csv
 ```
@@ -35,7 +35,7 @@ This is the .ipynb that generates the Trips demand file. Parameters are explaine
 >  [**Master_Function.ipynb**](Master_Function.ipynb)
 
 ## Step 3: Move Demand to Eagle
-Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to **REPLACE {NameOfYourOutputDemand.xml}** with the files name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
+Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to **REPLACE {NameOfYourOutputDemand.xml}** with the file name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
 scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/input_files/Trips/.
 ```
