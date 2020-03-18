@@ -49,7 +49,7 @@ ssh eagle.hpc.nrel.gov
 cd /project/athena/sumo_data/input_files/
 srun --time=30 --account=athena --ntasks=1 --pty $SHELL
 export SUMO_HOME="/projects/athena/sumo-installation/dist/sumo-git"
-sumo -n DFW2.net.xml --additional-files addition-file -r trips.xml 
+$SUMO_HOME/bin/sumo -n DFW2.net.xml --additional-files addition-file -r trips.xml 
 ```
 
 - As a batch file
