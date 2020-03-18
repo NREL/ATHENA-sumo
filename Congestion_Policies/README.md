@@ -5,7 +5,7 @@
 In a directory that you want ATHENA-Sumo to be:
 ```linux  
 git clone https://github.com/NREL/ATHENA-sumo.git
-cd ATHENA-siem-sumo
+cd ATHENA-sumo
 conda env create -f enviroment.yml 
 conda activate athena_sumo 
 ```
