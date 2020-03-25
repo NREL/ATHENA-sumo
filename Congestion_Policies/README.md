@@ -44,22 +44,40 @@ scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.
 
 ## STEP 4: Run SUMO simulation
 
-- Interactive Node
+- Interactive Node example
 ```linux
 ssh eagle.hpc.nrel.gov
-cd /project/athena/sumo_data/input_files/
-srun --time=30 --account=athena --ntasks=1 --pty $SHELL
+cd /scratch/{HPC_user_name}/path/to/run/Sumo
+srun --time=30 --account=athena --partition=debug --ntasks=1 --pty $SHELL
 export SUMO_HOME="/projects/athena/sumo-installation/dist/sumo-git"
-$SUMO_HOME/bin/sumo -n DFW2.net.xml --additional-files addition-file -r trips.xml 
+$SUMO_HOME/bin/sumo -n Network/DFW2.net.xml --additional-files Additional_Files/additional_2019-12-11.xml -r Trips/2018-1-2.High.trips.xml --summary summary.xml --eager-insert t
 ```
 
-- As a batch file
+- As a batch file 
 ```linux
 ssh eagle.hpc.nrel.gov
-cd /project/athena/sumo_data/inputData/
+cd /scratch/{HPC_user_name}/path/to/run/Sumo
 chmod u+x <YourBatch.batch>
 ./<YourBatch.batch>
 ```
+Example batch file:
+```linux
+#!/bin/bash
+#SBATCH --output=DFW_sim # slurm name
+#SBATCH --job-name=JoeSim # job name
+#SBATCH --ntasks=1 # Tasks to be run
+#SBATCH --nodes=1  # Run the tasks on the same node
+#SBATCH --time=100   # Required,
+#SBATCH --account=athena # Required
+#SBATCH --partition=short
 
+export SUMO_HOME="/projects/athena/sumo-installation/dist/sumo-git"
+
+$SUMO_HOME/bin/sumo -n Network/DFW2.net.xml --additional-files Additional_Files/additional_2019-12-11.xml -r Trips/2018-1-2.High.trips.xml --summary Output/summary.xml  --eager-insert t
+
+python $SUMO_HOME/tools/xml/xml2csv.py Output/summary.xml
+
+
+```
 ## STEP 5: Visualizations 
 in progress...
