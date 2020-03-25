@@ -6,7 +6,7 @@ In a directory that you want ATHENA-Sumo to be:
 ```linux  
 git clone https://github.com/NREL/ATHENA-sumo.git
 cd ATHENA-sumo
-conda env create -f enviroment.yml 
+conda env create -f environment.yml 
 conda activate athena_sumo 
 ```
 Once you have activated ```athena_sumo``` environment you will ```cd``` into ```Congestion_Policies```:
