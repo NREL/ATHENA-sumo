@@ -38,7 +38,8 @@ This is the .ipynb that generates the Trips demand file. Parameters are explaine
 ## Step 3: Move Demand to Eagle
 Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to **REPLACE {NameOfYourOutputDemand.xml}** with the file name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
-scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/projects/athena/sumo_data/input_files/Trips/.
+scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/scratch/{HPC user name}/path/to/Trips/.
+
 ```
 
 ## STEP 4: Run SUMO simulation
