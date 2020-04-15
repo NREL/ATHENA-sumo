@@ -1,7 +1,5 @@
 # Running many simulation scenarios on HPC
 
-### First, make sure you have an Eagle HPC account. If not, [request one](https://www.nrel.gov/hpc/user-accounts.html) and request to be added to the Athena project allocation.
-
 1. Login into Eagle HPC: 
 ```bash
 ssh username@eagle.hpc.nrel.gov
