@@ -62,7 +62,7 @@ sbatch <name_of_script_file>
 
 11. Check status for job with:
 ```bash
-squeue grep| grep <eagle username>
+squeue | grep <eagle username>
 ```
 
 12. When the job is done, check if simulations completed successfully.
