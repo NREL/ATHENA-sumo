@@ -5,10 +5,10 @@
 ssh username@eagle.hpc.nrel.gov
 ```
 
-### 2.  Go to athena project space and create a directory for your work (replace $NameOfyourDirectory with a name for your directory):
+### 2.  Go to athena project space and create a directory for your work (replace <NameOfyourDirectory> with a name for your directory):
 ```bash
 cd /projects/athena/
-mkdir $NameOfyourDirectory
+mkdir <NameOfyourDirectory>
 ```
 
 ### 3.  In your work directory, make a directory for Network files, Trip files, Additional files, simulation script files, and output files :
@@ -42,7 +42,7 @@ cd AddFiles
 cp /projects/athena/juliette/AddFiles/get_edge_out_year_* .
 ```
 
-### 7.  Copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion policy repository](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
+### 7.  Copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion folder](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
 
 ### 8.  Open Create_Script.py python scrit, and change the 'time_in_hours', 'begin_year', 'end_year', and 'trip_file_prefix' parameters according to desired simulation years. Script explains values to give for these parameters.
 
