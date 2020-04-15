@@ -2,6 +2,7 @@ __pycache__
 __pycache__/*
 .DS_Store
 Congestion_Policies/.DS_Store
+Example_Files/TempInputTrips/*
 .ipynb_checkpoints/
 .ipynb_checkpoints/*
 Lane_Closures/
