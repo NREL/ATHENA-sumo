@@ -72,7 +72,7 @@ squeue | grep <eagle username>
 ```bash
 tail -n 5 year_<begin_year>_<end_year>.log
 ```
-If command above returns text containig 'task 0: Killed', the job was terminated before completing. You will need to edit the script file by increasing the allocation time requested, and resubmit job (go back to step 10).
+If command above returns text containig 'task 0: Killed', the job was terminated before completing. You will need to edit the script file by increasing the allocation time requested, and resubmit job (go back to step 11).
 
 ### 14.  Convert xml output files to csv:
 ```bash
