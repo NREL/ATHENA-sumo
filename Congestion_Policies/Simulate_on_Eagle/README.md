@@ -44,7 +44,7 @@ cp /projects/athena/juliette/AddFiles/get_edge_out_year_* .
 
 ### 7.  Copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion folder](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
 
-### 8. Copy the Create_Script.py script to your ScriptFiles folder from this folder:
+### 8. Copy the Create_Script.py script to your ScriptFiles folder from this folder (Simulate_on_Eagle).:
 ```bash
 scp Create_Script.py eagle.hpc.nrel.gov:/projects/athena/<NameOfyourWorkDirectory>/ScriptFiles/
 ```
