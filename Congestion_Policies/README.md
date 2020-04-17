@@ -2,7 +2,7 @@
 > Click on the links below to skip to your respective step.
 - [**STEP 0: Clone Repo & Setup Env**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-0-clone-repo-and-setup-enviroment)
 - [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
-- [**STEP 2: Run Master Function**]()
+- [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-2-run-master-function)
 - [**STEP 3: Move Demand to Eagle**]()
 - [**STEP 4: Run Simulation**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-run-sumo-simulation)
 - [**STEP 5: Visualize Outputs**]()
