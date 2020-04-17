@@ -1,6 +1,7 @@
 # This folder has code for creating simulation for different scenarios and congestion policies
 
 ## STEP 0: Clone REPO and Setup Enviroment
+> NOTE: Ensure this is done in a local enviroment – not on Eagle.
 
 In a directory that you want ATHENA-Sumo to be:
 ```linux  
