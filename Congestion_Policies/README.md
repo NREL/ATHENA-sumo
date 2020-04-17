@@ -5,7 +5,7 @@
 - [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-2-run-master-function)
 - [**STEP 3: Move Demand to Eagle**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-3-move-demand-to-eagle)
 - [**STEP 4: Run Simulation**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-run-sumo-simulation)
-- [**STEP 5: Visualize Outputs**]()
+- [**STEP 5: Visualize Outputs**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-5-visualizations)
 ## STEP 0: Clone REPO and Setup Enviroment
 > NOTE: Ensure this is done in a local enviroment – not on Eagle.
 
