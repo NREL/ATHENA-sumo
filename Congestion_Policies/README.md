@@ -1,5 +1,5 @@
 # This folder has code for creating simulation for different scenarios and congestion policies
-
+4 . [**STEP 4: Run Simulation**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-run-sumo-simulation)
 ## STEP 0: Clone REPO and Setup Enviroment
 > NOTE: Ensure this is done in a local enviroment – not on Eagle.
 
