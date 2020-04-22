@@ -68,7 +68,7 @@ emacs <CREATED SCRIPT FILE>
 sbatch <name_of_script_file>
 ```
 
-### 14.  Check status for job with following command. Of command returns line containing: PD means job pending, R means running. If command returns nothing, it means all jobs you submitted to Eagle are done.  
+### 14.  Check status for job with following command. If command returns line containing: PD means job pending, R means running. If command returns nothing, it means all jobs you submitted to Eagle are done.  
 ```bash
 squeue | grep <eagle username>
 ```
