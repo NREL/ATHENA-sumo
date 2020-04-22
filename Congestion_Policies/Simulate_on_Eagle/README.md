@@ -91,8 +91,9 @@ module load conda
 export SUMO_HOME=/scratch/jugirumu/projects/sumo/dist/sumo-git
 python $SUMO_HOME/tools/xml/xml2csv.py <output xml>
 ```
-You can also use a convert script file by copying it to your output file:
+You can also use a convert script file by copying it to your output file. Make sure you open the file and edit it to convert your output files:
 ```bash
 cd output
-/projects/athena/juliette/output/convert_xml.slurm
+cp /projects/athena/juliette/output/convert_xml.slurm .
+./convert_xml.slurm
 ```

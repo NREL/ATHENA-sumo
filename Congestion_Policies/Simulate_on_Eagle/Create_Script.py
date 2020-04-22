@@ -11,7 +11,7 @@ import time
 
 # In[8]:
 
-
+# year = 0 is the original demand from DFW, year 1 is year 0 demand scaled by 3%, year 2 is year 1 demand scaled by 3%, ... 
 time_in_hours = 2    # Run time of job on eagle, float
 begin_year = 1   # first year to be simulated, integer
 end_year = 5      # last eyar to be simulated, integer
@@ -69,7 +69,7 @@ file.write("\n")
 i = 1
 for y in range(begin_year, end_year+1):
     scaling= (1+scale_factor)**y
-    suffix = round(100*(scaling-1))
+    suffix = int(round(100*(scaling-1)))
 
     if y == 0: trip_file = trip_folder + trip_file_prefix + '.trips.xml'
     else: trip_file = trip_folder + trip_file_prefix + '.Scaled'+str(suffix)+'%.trips.xml'
