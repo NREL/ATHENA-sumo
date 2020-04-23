@@ -77,8 +77,7 @@ for y in range(begin_year, end_year+1):
     file.write('srun -N 1 $SUMO_HOME/bin/sumo -n ' + network_file + ' -r ' + trip_file
                + ' -e 86400 -a ' + add_file + ','+ add_folder +  out_file_prefix + str(y)
            + '.xml' + ' --tripinfo-output ' + output_folder + '/year_' + str(y)+ '_trip_outputs.xml' + 
-           ' --eager-insert t --summary ' + output_folder + '/year_' + str(y) + '_summary.xml' + 
-               ' --time-to-teleport -1')
+           ' --eager-insert t --summary ' + output_folder + '/year_' + str(y) + '_summary.xml')
     if end_year > begin_year: file.write(' &\n')
     else: file.write('\n')
     file.write('\n')
