@@ -97,3 +97,5 @@ cd output
 cp /projects/athena/juliette/output/convert_xml.slurm .
 ./convert_xml.slurm
 ```
+
+### Notes: Script "generateEdgesOutXmlsWithSubFolder.py" regenerates edges-out xmls with desired subfolder within output/ folder.
