@@ -3,9 +3,9 @@
 
 # In[1]:
 
-
+from __future__ import division
 import time
-
+import math
 
 # ## Change the parameters below to match your simulation scenarios
 
@@ -25,7 +25,9 @@ trip_file_prefix = '2017-10-17'     # Should be the date of the day you are simu
 
 account = 'athena'    # account allocation on Eagle
 sumo_loc = 'SUMO_HOME=/projects/athena/sumo-installation/dist/sumo-git' #Location of SUMO installation on Eagle
-number_nodes = end_year - begin_year + 1  # number of nodes to be requested, integer. Should be equal to number of years to be simulated.
+num_proc = 18
+num_tasks = end_year - begin_year + 1
+number_nodes = int(math.ceil((num_tasks)/num_proc))  # number of nodes to be requested, integer. Should be equal to number of years to be simulated.
 scale_factor = 0.03  # Increase in demand per year
 job_name='year_'+str(begin_year)+'_'+str(end_year)    # Job name on Eagle, useful for differentiating jobs when running multiple jobs
 out_file = 'year_'+str(begin_year)+'_' + str(end_year)+'.log'   # file to log output from simulation runs 
@@ -56,11 +58,12 @@ else: script_file = "run_sim_"+ str(begin_year) + '_' + str(end_year)+'.slurm'
 file = open(script_file, "w")
 file.write("#!/usr/bin/env bash\n")
 file.write("#SBATCH --job-name=year_" + str(begin_year) + '_'+ str(end_year) +'\n')
-file.write("#SBATCH --output=sims_" + str(begin_year) + '_'+ str(end_year) +'\n')
+file.write("#SBATCH --output=sims_" + str(begin_year) + '_'+ str(end_year) +'.log\n')
 file.write("#SBATCH --account=athena\n")
 time_string = time.strftime('%H:%M:%S', time.gmtime(time_in_hours*3600))
 file.write("#SBATCH --time="+ time_string + "\n")
 file.write("#SBATCH --nodes=" + str(number_nodes) + '\n')
+file.write("#SBATCH --ntasks-per-node=" + str(num_tasks) + '\n')
 file.write("\n")
 file.write("export " + sumo_loc + "\n")
 file.write("\n")
@@ -74,7 +77,7 @@ for y in range(begin_year, end_year+1):
     if y == 0: trip_file = trip_folder + trip_file_prefix + '.trips.xml'
     else: trip_file = trip_folder + trip_file_prefix + '.Scaled'+str(suffix)+'%.trips.xml'
 
-    file.write('srun -N 1 $SUMO_HOME/bin/sumo -n ' + network_file + ' -r ' + trip_file
+    file.write('srun -N 1  -n 1 $SUMO_HOME/bin/sumo -n ' + network_file + ' -r ' + trip_file
                + ' -e 86400 -a ' + add_file + ','+ add_folder +  out_file_prefix + str(y)
            + '.xml' + ' --tripinfo-output ' + output_folder + '/year_' + str(y)+ '_trip_outputs.xml' + 
            ' --eager-insert t --summary ' + output_folder + '/year_' + str(y) + '_summary.xml')
