@@ -643,3 +643,242 @@ def combineTrips(fileOutput,
     configfile = os.path.join(folderOutput,fileOutput)
     with open(configfile, 'wb') as f:
         f.write(minidom.parseString(ET.tostring(xroutes)).toprettyxml(encoding="utf-8"))
+
+def create_sumo_demand_TNC_curbside_base(people,
+                                          level,
+                                          Date,
+                                          percentOfTNC=.255,
+                                          peopleToCars=.309,
+                                          stops= {
+        "A":['A_top_1','A_top_2','A_top_3','A_bot_1'],
+        "B":['B_top_1','B_top_2','B_top_3','B_bot_1'],
+        "C":['C_top_1','C_top_2','C_top_3','C_bot_1'],
+        "D":['D_depart_1','D_depart_2','D_arrive_1','D_arrive_2'],
+        "E":['E_top_1','E_top_2','E_top_3','E_bot_1'],
+
+        },
+                                         alt_stops = {
+        "A":['A_top_1','A_top_2','A_top_3','A_bot_1','A_bot_2','A_bot_3'],
+        "B":['B_top_1','B_top_2','B_top_3','B_bot_1','B_bot_2','B_bot_3'],
+        "C":['C_top_1','C_top_2','C_top_3','C_bot_1','C_bot_2','C_bot_3'],
+        "D":['D_depart_1','D_depart_2','D_arrive_1','D_arrive_2','D_service'],
+        "E":['E_top_1','E_top_2','E_top_3','E_bot_1','E_bot_2','E_bot_3'],
+
+        },
+                                         ballpark = {
+        'Arrive':['TNC_1','TNC_2','TNC_3']
+        },
+                                        missed_stop = {
+       'A_top_1':['A_top_2','A_top_3','A_bot_1','A_bot_2','A_bot_3'],
+       'A_top_2':['A_bot_3','A_bot_1','A_bot_2','A_bot_3'],
+       'A_top_3':['A_bot_1','A_bot_2','A_bot_3'],
+       'A_bot_1':['A_top_1','A_top_2','A_top_3','A_bot_2','A_bot_3'],
+       'B_top_1':['B_top_2','B_top_3','B_bot_1'],
+       'B_top_2':['B_top_3','B_bot_1','B_bot_2'],
+       'B_top_3':['B_bot_1','B_bot_2','B_bot_3'],
+       'B_bot_1':['B_top_1','B_top_2','B_top_3','B_bot_2'],
+       'C_top_1':['C_top_2','C_top_3','C_bot_1'],
+       'C_top_2':['C_top_3','C_bot_1','C_bot_2'],
+       'C_top_3':['C_bot_1','C_bot_2','C_bot_3'],
+       'C_bot_1':['C_top_1','C_top_2','C_top_3'],
+       'D_depart_1':['D_depart_2','D_arrive_1','D_arrive_2'],
+       'D_depart_2':['D_arrive_1','D_arrive_2'],
+       'D_arrive_1':['D_arrive_2','D_depart_2','D_depart_1'],
+       'D_arrive_2':['D_depart_2','D_arrive_1','D_depart_1'],
+       'E_top_1':['E_top_2','E_top_3','E_bot_1'],
+       'E_top_2':['E_top_3','E_bot_1','E_bot_2'],
+       'E_top_3':['E_bot_1','E_bot_2','E_bot_3'],
+       'E_bot_1':['E_top_1','E_top_2','E_top_3']
+        },
+                                         policy=None,
+                                         end_weight = [.2,.8],
+                                         start_weights = [.225,.225,.275,.275],
+                                         stop_duration_drop_off = np.random.exponential(20,10000) + np.random.normal(60,5,10000),
+                                         stop_duration_pick_up = np.random.exponential(20,10000) + np.random.normal(60,5,10000),
+                                         mid_stop_duration = np.random.normal(60,5,10000),
+                                         ):
+
+    end_weight_south = end_weight[::-1]
+
+    columns = ['Arrive_A_people','Arrive_B_people','Arrive_C_people','Arrive_D_people',
+               'Arrive_E_people','Depart_A_people','Depart_B_people',
+               'Depart_C_people','Depart_D_people','Depart_E_people']
+    starts = ['South_1', 'South_Plaza', 'North_Plaza', 'North_1']
+    ends = ['South_Exit', 'North_Exit']
+    routes = Element('routes')
+    routes.set('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance')
+    routes.set('xsi:noNamespaceSchemaLocation', 'http://sumo.dlr.de/xsd/routes_file.xsd')
+    people['seconds'] = np.array(people.index) * 30 * 60
+    count = 1
+
+    # TNC vehicles pre-staging (vehicles go to the staging area waiting for high-demand)
+    arrive_num = (people['Arrive_A_people'] + people['Arrive_B_people'] + \
+    people['Arrive_C_people'] + people['Arrive_D_people'] + people['Arrive_E_people'])
+    depart_num = (people['Depart_A_people'] + people['Depart_B_people'] + \
+    people['Depart_C_people'] + people['Depart_D_people'])
+    # every one of the departure TNC will go to the staging area for a pick up.. may need to change
+    TNC_prestaging = arrive_num - depart_num
+    # go to staging area half an hour before curb time
+    TNC_prestaging = TNC_prestaging[1:48]
+    TNC_prestaging.index = np.arange(47)
+    # when there are more departure than arrival, no pre-staging needed
+    TNC_prestaging[TNC_prestaging<0] = 0
+    TNC_prestaging = round(TNC_prestaging/peopleToCars)
+    # generate trips
+    TNC_prestaging_seconds = np.array(TNC_prestaging.index) * 30 * 60
+    for t,numTNC in enumerate(TNC_prestaging.astype('int')):
+         for i in range(numTNC):
+            time = TNC_prestaging_seconds[t] + round(np.random.uniform(0,1800))
+            start = np.random.choice(starts,p=start_weights )
+            end = np.random.choice(ballpark['Arrive'])
+            stop = end
+
+            trip = Element('trip')
+            trip.set('id', 'pre_statging' + '_TNC_' + str(count))
+            trip.set('type', 'passenger')
+            trip.set('color', "#bb0000")
+            trip.set('depart',str(time))
+            trip.set('from',start)
+            trip.set('to',end)
+            trip.set('departSpeed', "max")
+            trip.set('departLane', "best")
+
+            count+=1
+            routes.append(trip)
+            ET.SubElement(trip,"stop",busStop=stop,duration='0',parking='true')
+
+    for column in columns:
+        column_string = column.split('_')
+        category = column_string[0] # arrival or departure
+        terminal = column_string[1]
+
+        ## pick up
+        if(category == 'Arrive'):
+            for t,numberOfPeople in enumerate(people[column]):
+                numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
+                numberOfVehicles_from_outside = round(numberOfVehicles * 0)
+                numberOfVehicles_from_staging = round(numberOfVehicles * 1)
+                # here to specify a proportion that experience difficulty finding passengers
+
+                for i in range(numberOfVehicles_from_outside):
+                    time = people['seconds'][t] + round(np.random.uniform(0,1800))
+                    start = np.random.choice(starts,p=start_weights )
+                    if start[0] == "S":
+                        p = end_weight_south
+                    else:
+                        p = end_weight
+                    end = np.random.choice(ends,p=p)
+                    stop = np.random.choice(stops[terminal])
+
+                    trip = Element('trip')
+                    trip.set('id', column + '_TNC_' + str(count))
+                    trip.set('type', 'passenger')
+                    trip.set('color', "#bb0000")
+                    trip.set('depart',str(time))
+                    trip.set('from',start)
+                    trip.set('to',end)
+                    trip.set('departSpeed', "max")
+                    trip.set('departLane', "best")
+
+                    count+=1
+                    routes.append(trip)
+                    duration = str(np.random.choice(stop_duration_pick_up))
+                    mid_duration = str(np.random.choice(mid_stop_duration))
+                    if np.random.uniform(100) < 5:
+                        second_stop = np.random.choice(missed_stop[stop])
+                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration)
+                        ET.SubElement(trip,"stop",busStop=second_stop,duration=duration,parking='true')
+
+                    else:
+                        ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
+
+                for i in range(numberOfVehicles_from_staging):
+                    time = people['seconds'][t] + round(np.random.uniform(0,1800))
+                    start = np.random.choice(ballpark['Arrive'])
+                    end = np.random.choice(ends,p=end_weight)
+                    stop = np.random.choice(stops[terminal])
+
+                    trip = Element('trip')
+                    trip.set('id', column + '_TNC_' + str(count))
+                    trip.set('type', 'passenger')
+                    trip.set('color', "#bb0000")
+                    trip.set('depart',str(time))
+                    trip.set('from',start)
+                    trip.set('to',end)
+                    trip.set('departSpeed', "max")
+                    trip.set('departLane', "best")
+
+                    count+=1
+                    routes.append(trip)
+                    duration = str(np.random.choice(stop_duration_pick_up))
+                    mid_duration = str(np.random.choice(mid_stop_duration))
+                    if np.random.uniform(100) < 5:
+                        second_stop = np.random.choice(missed_stop[stop])
+                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration)
+                        ET.SubElement(trip,"stop",busStop=second_stop,duration=duration,parking='true')
+
+                    else:
+                        ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
+
+        ## dropp-off
+        else:
+            for t,numberOfPeople in enumerate(people[column]):
+                numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
+                numberOfVehicles_to_outside = round(numberOfVehicles * 0.1)
+                numberOfVehicles_to_staging = round(numberOfVehicles * 0.9)
+
+                for i in range(numberOfVehicles_to_outside):
+                    time = people['seconds'][t] + round(np.random.uniform(0,1800))
+                    start = np.random.choice(starts,p=start_weights )
+                    if start[0] == "S":
+                        p = end_weight_south
+                    else:
+                        p = end_weight
+                    end = np.random.choice(ends,p=p)
+                    stop = np.random.choice(stops[terminal])
+
+                    trip = Element('trip')
+                    trip.set('id', column + '_TNC_' + str(count))
+                    trip.set('type', 'passenger')
+                    trip.set('color', "#bb0000")
+                    trip.set('depart',str(time))
+                    trip.set('from',start)
+                    trip.set('to',end)
+                    trip.set('departSpeed', "max")
+                    trip.set('departLane', "best")
+
+                    count+=1
+                    routes.append(trip)
+                    duration = str(np.random.choice(stop_duration_drop_off))
+                    ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
+
+                for i in range(numberOfVehicles_to_staging):
+                    time = people['seconds'][t] + round(np.random.uniform(0,1800))
+                    start = np.random.choice(starts,p=start_weights )
+                    end = np.random.choice(ballpark['Arrive'])
+                    stop = np.random.choice(stops[terminal])
+
+                    trip = Element('trip')
+                    trip.set('id', column + '_TNC_' + str(count))
+                    trip.set('type', 'passenger')
+                    trip.set('color', "#bb0000")
+                    trip.set('depart',str(time))
+                    trip.set('from',start)
+                    trip.set('to',end)
+                    trip.set('departSpeed', "max")
+                    trip.set('departLane', "best")
+
+                    count+=1
+                    routes.append(trip)
+                    duration = str(np.random.choice(stop_duration_drop_off))
+                    ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
+
+
+    routes[:] = sorted(routes, key=lambda child: (child.tag,float(child.get('depart'))))
+
+    file_name = Date + "." + level+ ".TNC.curb.xml"
+    folder = "../Example_Files/TempDemandXML"
+    print("Saving to xml: ", file_name)
+
+    with open(os.path.join(folder,file_name), 'wb') as f:
+        f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8"))
