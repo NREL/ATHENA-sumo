@@ -982,7 +982,7 @@ def get_unique_stops(trip_file):
     names to be used to geneerate your additional file.
     '''
     unique_stops = set()
-    tree = etree.parse(trip_file)
+    tree = ET.parse(trip_file)
     root = tree.getroot()
     for trip in root.findall('trip'):
         stops = trip.findall('stop')
