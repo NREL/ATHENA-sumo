@@ -790,7 +790,7 @@ def create_sumo_demand_TNC_curbside_base(people,
                                          ):
 
     end_weight_south = end_weight[::-1]
-
+    non_staging = 1 - staging 
     columns = ['Arrive_A_people','Arrive_B_people','Arrive_C_people','Arrive_D_people',
                'Arrive_E_people','Depart_A_people','Depart_B_people',
                'Depart_C_people','Depart_D_people','Depart_E_people']
@@ -912,7 +912,7 @@ def create_sumo_demand_TNC_curbside_base(people,
                         ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
 
         ## dropp-off
-        non_staging = 1 - staging 
+        
         else:
             for t,numberOfPeople in enumerate(people[column]):
                 numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
