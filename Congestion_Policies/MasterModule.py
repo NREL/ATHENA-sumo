@@ -437,6 +437,12 @@ def create_sumo_demand_parking(people,
     people['seconds'] = np.array(people.index) * 30 * 60
     count = 1
     buses = {}
+    #intializing a dictionary
+    for term in ['A','B','C','D','E']:
+        for hr in range(24):
+            for arrdp in ['Arrive','Depart']:
+                buses[term+'_'+str(hr)+'_'+arrdp]=0
+
     for column in columns:
         column_string = column.split('_')
         terminal = column_string[1]
@@ -457,10 +463,14 @@ def create_sumo_demand_parking(people,
                     #add buses from parking to terminal
 
                 halfHour = round(time/3600)
+                # try:
+                #     buses[terminal + '_' + str(halfHour)] += 1
+                # except:
+                #     buses[terminal + '_' + str(halfHour)] = 1=
                 try:
-                    buses[terminal + '_' + str(halfHour)] += 1
+                    buses[terminal + '_' + str(int(halfHour))+'_'+column_string[0]] += peopleToCars
                 except:
-                    buses[terminal + '_' + str(halfHour)] = 1
+                    buses[terminal + '_' + str(int(halfHour))+'_'+column_string[0]] = peopleToCars
                 trip = Element('trip')
                 trip.set('id', column + '_parking_' + str(count))
                 trip.set('type', 'passenger')
@@ -473,7 +483,11 @@ def create_sumo_demand_parking(people,
 
                 count+=1
                 routes.append(trip)
-
+    #building dictionary for extra buses
+    maxbuses={}
+    for term in ['A','B','C','D','E']:
+        for hr in range(24):
+            maxbuses[term+'_'+str(hr)]=max(buses[term+'_'+str(hr)+'_Arrive'],buses[term+'_'+str(hr)+'_Depart'])
 
     routes[:] = sorted(routes, key=lambda child: (child.tag,float(child.get('depart'))))
 
@@ -484,7 +498,7 @@ def create_sumo_demand_parking(people,
     with open(os.path.join(folder,file_name), 'wb') as f:
         f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8"))
 
-    return buses
+    return maxbuses
 
 def add_buses_for_people(buses,
                          Date,
@@ -546,6 +560,82 @@ def add_buses_for_people(buses,
     with open(os.path.join(folder,file_name), 'wb') as f:
         f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8"))
 
+#Adding new function for adding RAC add_buses_for_people
+def add_buses_for_RAC(people,level,Date,percentOfRAC,
+                         capacity=43*0.7,
+                         stops = {
+                                "A":['A_bot_3','A_bot_2'],
+                                "B":['B_bot_3','B_bot_2'],
+                                "C":['C_bot_3','C_bot_2'],
+                                "D":['D_arrive_1','D_depart_2'],
+                                "E":['E_bot_3','E_bot_2','E_bot_1']},
+                         stop_duration=np.random.exponential(20,10000) + np.random.normal(60,5,10000)):
+
+    columns = ['Arrive_A_people','Arrive_B_people','Arrive_C_people','Arrive_D_people',
+               'Arrive_E_people','Depart_A_people','Depart_B_people',
+               'Depart_C_people','Depart_D_people','Depart_E_people']
+    people['seconds'] = np.array(people.index) * 30 * 60
+    count = 1
+    buses = {}
+    for term in ['A','B','C','D','E']:
+        for hr in range(24):
+            for arrdp in ['Arrive','Depart']:
+                buses[term+'_'+str(hr)+'_'+arrdp]=0
+    for column in columns:
+        column_string = column.split('_')
+        terminal = column_string[1]
+        for t,numberOfPeople in enumerate(people[column]):
+            numberOfPeopleFromRAC = round(numberOfPeople * percentOfRAC)
+            for i in range(numberOfPeopleFromRAC):
+                time = people['seconds'][t] + round(np.random.uniform(0,1800))
+                hr = round(time/3600)
+                try:
+                    buses[terminal + '_' + str(int(hr))+'_'+column_string[0]] += 1
+                except:
+                    buses[terminal + '_' + str(int(hr))+'_'+column_string[0]] = 1
+                count+=1
+    maxbuses={}
+    for term in ['A','B','C','D','E']:
+        for hr in range(24):
+            maxbuses[term+'_'+str(hr)]=max(buses[term+'_'+str(hr)+'_Arrive'],buses[term+'_'+str(hr)+'_Depart'])
+
+    routes = Element('routes')
+    routes.set('xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance')
+    routes.set('xsi:noNamespaceSchemaLocation', 'http://sumo.dlr.de/xsd/routes_file.xsd')
+    count = 0
+    for key in maxbuses:
+        key_string = key.split('_')
+        terminal = key_string[0]
+        hour = key_string[1]
+        hr = float(hour) * 3600
+        passengers = maxbuses[key]
+        number_of_buses = int(np.ceil(passengers/capacity))
+        if number_of_buses > 0:
+            for i in range(number_of_buses):
+                time = max(0, round(hr + 3600/number_of_buses*i + np.random.uniform(-60,60)))
+               # time = hr + round(np.random.uniform(0,3600))
+                start = 'RAC_pick'
+                end = 'RAC_drop'
+                trip = Element('trip')
+                trip.set('id', 'RAC_'+terminal + '_' + str(count))
+                trip.set('type', 'bus')
+                trip.set('color', "#bb0000")
+                trip.set('depart',str(time))
+                trip.set('from',start)
+                trip.set('to',end)
+                trip.set('departSpeed', "max")
+                trip.set('departLane', "best")
+                count+=1
+                routes.append(trip)
+                for stop in stops[terminal]:
+                    duration = str(round(np.random.choice(stop_duration)))
+                    ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
+    routes[:] = sorted(routes, key=lambda child: (child.tag,float(child.get('depart'))))
+    file_name = Date + "." + level+ ".RAC_bus.xml"
+    folder = "../Example_Files/TempDemandXML"
+    print("Saving to xml: ", file_name)
+    with open(os.path.join(folder,file_name), 'wb') as f:
+        f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8"))
 
 
 def create_sumo_demand_limo_curbside(people,
@@ -647,15 +737,16 @@ def combineTrips(fileOutput,
 def create_sumo_demand_TNC_curbside_base(people,
                                           level,
                                           Date,
+                                          staging = .9,
                                           percentOfTNC=.255,
-                                          peopleToCars=.309, 
+                                          peopleToCars=.309,
                                           stops= {
         "A":['A_top_1','A_top_2','A_top_3','A_bot_1'],
         "B":['B_top_1','B_top_2','B_top_3','B_bot_1'],
         "C":['C_top_1','C_top_2','C_top_3','C_bot_1'],
         "D":['D_depart_1','D_depart_2','D_arrive_1','D_arrive_2'],
         "E":['E_top_1','E_top_2','E_top_3','E_bot_1'],
-        
+
         },
                                          alt_stops = {
         "A":['A_top_1','A_top_2','A_top_3','A_bot_1','A_bot_2','A_bot_3'],
@@ -663,7 +754,7 @@ def create_sumo_demand_TNC_curbside_base(people,
         "C":['C_top_1','C_top_2','C_top_3','C_bot_1','C_bot_2','C_bot_3'],
         "D":['D_depart_1','D_depart_2','D_arrive_1','D_arrive_2','D_service'],
         "E":['E_top_1','E_top_2','E_top_3','E_bot_1','E_bot_2','E_bot_3'],
-        
+
         },
                                          ballpark = {
         'Arrive':['TNC_1','TNC_2','TNC_3']
@@ -685,7 +776,7 @@ def create_sumo_demand_TNC_curbside_base(people,
        'D_depart_2':['D_arrive_1','D_arrive_2'],
        'D_arrive_1':['D_arrive_2','D_depart_2','D_depart_1'],
        'D_arrive_2':['D_depart_2','D_arrive_1','D_depart_1'],
-       'E_top_1':['E_top_2','E_top_3','E_bot_1'], 
+       'E_top_1':['E_top_2','E_top_3','E_bot_1'],
        'E_top_2':['E_top_3','E_bot_1','E_bot_2'],
        'E_top_3':['E_bot_1','E_bot_2','E_bot_3'],
        'E_bot_1':['E_top_1','E_top_2','E_top_3']
@@ -697,9 +788,9 @@ def create_sumo_demand_TNC_curbside_base(people,
                                          stop_duration_pick_up = np.random.exponential(20,10000) + np.random.normal(60,5,10000),
                                          mid_stop_duration = np.random.normal(60,5,10000),
                                          ):
-    
+
     end_weight_south = end_weight[::-1]
-    
+
     columns = ['Arrive_A_people','Arrive_B_people','Arrive_C_people','Arrive_D_people',
                'Arrive_E_people','Depart_A_people','Depart_B_people',
                'Depart_C_people','Depart_D_people','Depart_E_people']
@@ -710,21 +801,21 @@ def create_sumo_demand_TNC_curbside_base(people,
     routes.set('xsi:noNamespaceSchemaLocation', 'http://sumo.dlr.de/xsd/routes_file.xsd')
     people['seconds'] = np.array(people.index) * 30 * 60
     count = 1
-    
+
     # TNC vehicles pre-staging (vehicles go to the staging area waiting for high-demand)
     arrive_num = (people['Arrive_A_people'] + people['Arrive_B_people'] + \
     people['Arrive_C_people'] + people['Arrive_D_people'] + people['Arrive_E_people'])
     depart_num = (people['Depart_A_people'] + people['Depart_B_people'] + \
     people['Depart_C_people'] + people['Depart_D_people'])
-    # every one of the departure TNC will go to the staging area for a pick up.. may need to change 
+    # every one of the departure TNC will go to the staging area for a pick up.. may need to change
     TNC_prestaging = arrive_num - depart_num
-    # go to staging area half an hour before curb time 
+    # go to staging area half an hour before curb time
     TNC_prestaging = TNC_prestaging[1:48]
     TNC_prestaging.index = np.arange(47)
     # when there are more departure than arrival, no pre-staging needed
     TNC_prestaging[TNC_prestaging<0] = 0
     TNC_prestaging = round(TNC_prestaging/peopleToCars)
-    # generate trips 
+    # generate trips
     TNC_prestaging_seconds = np.array(TNC_prestaging.index) * 30 * 60
     for t,numTNC in enumerate(TNC_prestaging.astype('int')):
          for i in range(numTNC):
@@ -745,21 +836,21 @@ def create_sumo_demand_TNC_curbside_base(people,
 
             count+=1
             routes.append(trip)
-            ET.SubElement(trip,"stop",busStop=stop,duration='0',parking='true')            
-                
+            ET.SubElement(trip,"stop",busStop=stop,duration='0',parking='true')
+
     for column in columns:
         column_string = column.split('_')
         category = column_string[0] # arrival or departure
         terminal = column_string[1]
-        
+
         ## pick up
         if(category == 'Arrive'):
             for t,numberOfPeople in enumerate(people[column]):
                 numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
                 numberOfVehicles_from_outside = round(numberOfVehicles * 0)
                 numberOfVehicles_from_staging = round(numberOfVehicles * 1)
-                # here to specify a proportion that experience difficulty finding passengers 
-                
+                # here to specify a proportion that experience difficulty finding passengers
+
                 for i in range(numberOfVehicles_from_outside):
                     time = people['seconds'][t] + round(np.random.uniform(0,1800))
                     start = np.random.choice(starts,p=start_weights )
@@ -784,12 +875,12 @@ def create_sumo_demand_TNC_curbside_base(people,
                     routes.append(trip)
                     duration = str(np.random.choice(stop_duration_pick_up))
                     mid_duration = str(np.random.choice(mid_stop_duration))
-                    if np.random.uniform(100) < 5: 
+                    if np.random.uniform(100) < 5:
                         second_stop = np.random.choice(missed_stop[stop])
-                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration) 
+                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration)
                         ET.SubElement(trip,"stop",busStop=second_stop,duration=duration,parking='true')
 
-                    else: 
+                    else:
                         ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
 
                 for i in range(numberOfVehicles_from_staging):
@@ -812,20 +903,21 @@ def create_sumo_demand_TNC_curbside_base(people,
                     routes.append(trip)
                     duration = str(np.random.choice(stop_duration_pick_up))
                     mid_duration = str(np.random.choice(mid_stop_duration))
-                    if np.random.uniform(100) < 5: 
+                    if np.random.uniform(100) < 5:
                         second_stop = np.random.choice(missed_stop[stop])
-                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration) 
+                        ET.SubElement(trip,"stop",busStop=stop,duration=mid_duration)
                         ET.SubElement(trip,"stop",busStop=second_stop,duration=duration,parking='true')
 
-                    else: 
+                    else:
                         ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
 
         ## dropp-off
-        else: 
+        non_staging = 1 - staging 
+        else:
             for t,numberOfPeople in enumerate(people[column]):
                 numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
-                numberOfVehicles_to_outside = round(numberOfVehicles * 0.1)
-                numberOfVehicles_to_staging = round(numberOfVehicles * 0.9)
+                numberOfVehicles_to_outside = round(numberOfVehicles * non_staging)
+                numberOfVehicles_to_staging = round(numberOfVehicles * staging)
 
                 for i in range(numberOfVehicles_to_outside):
                     time = people['seconds'][t] + round(np.random.uniform(0,1800))
@@ -871,7 +963,7 @@ def create_sumo_demand_TNC_curbside_base(people,
                     count+=1
                     routes.append(trip)
                     duration = str(np.random.choice(stop_duration_drop_off))
-                    ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')            
+                    ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
 
 
     routes[:] = sorted(routes, key=lambda child: (child.tag,float(child.get('depart'))))
@@ -879,6 +971,64 @@ def create_sumo_demand_TNC_curbside_base(people,
     file_name = Date + "." + level+ ".TNC.curb.xml"
     folder = "../Example_Files/TempDemandXML"
     print("Saving to xml: ", file_name)
-        
+
     with open(os.path.join(folder,file_name), 'wb') as f:
-        f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8")) 
+        f.write(minidom.parseString(ET.tostring(routes)).toprettyxml(encoding="utf-8"))
+
+
+def get_unique_stops(trip_file):
+    '''
+    This function takes a relative or explicit path to your trip file and returns only the unique stop location
+    names to be used to geneerate your additional file.
+    '''
+    unique_stops = set()
+    tree = etree.parse(trip_file)
+    root = tree.getroot()
+    for trip in root.findall('trip'):
+        stops = trip.findall('stop')
+        if stops != None:
+            for stop in stops:
+                unique_stops.add(stop.attrib['busStop'])
+    return unique_stops
+
+def build_additional_file(unique_stops):
+    '''
+    Takes in unique stop IDs and builds out everything you'll need for your additional file and guarantees
+    all stop IDs are generated. Adds both vehicle types and their respective parameters along with vehicle stops.
+    '''
+    additional = Element('additional')
+    vTypes = ['truck','trailer','bus','passenger']
+    sigma = .13
+    for veh in vTypes:
+
+        vType = Element('vType')
+        vType.set('id', veh)
+        vType.set('vClass', veh)
+        vType.set('sigma', str(sigma))
+        if veh == 'passenger':
+            vType.set('accel',str(10))
+            vType.set('decel',str(10))
+            vType.set('length',str(7))
+        additional.append(vType)
+
+    for stop in unique_stops:
+        lane = stop + "_0"
+        busStop = Element('busStop')
+        busStop.set('endPos', "-1")
+        busStop.set('friendlyPos', "1")
+        busStop.set('id', stop)
+        busStop.set('lane', lane)
+        busStop.set('lines', str(1))
+        busStop.set('startPos', str(0))
+        additional.append(busStop)
+    Date = str(datetime.today()).split()[0]
+    file_name = Date + ".additional.xml"
+    folder = "../Example_Files/SUMO_Input_Files"
+
+    with open(os.path.join(folder,file_name), 'wb') as f:
+        f.write(minidom.parseString(ET.tostring(additional)).toprettyxml(encoding="utf-8"))
+    print("your file named: ", file_name, " is located in: ",folder)
+
+def main_additional_build(trip_file):
+    unique_stops = get_unique_stops(trip_file)
+    build_additional_file(unique_stops)
