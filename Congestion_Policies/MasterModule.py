@@ -737,9 +737,9 @@ def combineTrips(fileOutput,
 def create_sumo_demand_TNC_curbside_base(people,
                                           level,
                                           Date,
-                                          staging = .9,
                                           percentOfTNC=.255,
                                           peopleToCars=.309,
+                                          staging = .9,
                                           stops= {
         "A":['A_top_1','A_top_2','A_top_3','A_bot_1'],
         "B":['B_top_1','B_top_2','B_top_3','B_bot_1'],
@@ -790,7 +790,7 @@ def create_sumo_demand_TNC_curbside_base(people,
                                          ):
 
     end_weight_south = end_weight[::-1]
-    non_staging = 1 - staging 
+    non_staging = 1 - staging
     columns = ['Arrive_A_people','Arrive_B_people','Arrive_C_people','Arrive_D_people',
                'Arrive_E_people','Depart_A_people','Depart_B_people',
                'Depart_C_people','Depart_D_people','Depart_E_people']
@@ -806,7 +806,7 @@ def create_sumo_demand_TNC_curbside_base(people,
     arrive_num = (people['Arrive_A_people'] + people['Arrive_B_people'] + \
     people['Arrive_C_people'] + people['Arrive_D_people'] + people['Arrive_E_people'])
     depart_num = (people['Depart_A_people'] + people['Depart_B_people'] + \
-    people['Depart_C_people'] + people['Depart_D_people'])
+    people['Depart_C_people'] + people['Depart_D_people'] + people['Depart_E_people']) # add people _E depart
     # every one of the departure TNC will go to the staging area for a pick up.. may need to change
     TNC_prestaging = arrive_num - depart_num
     # go to staging area half an hour before curb time
@@ -815,6 +815,7 @@ def create_sumo_demand_TNC_curbside_base(people,
     # when there are more departure than arrival, no pre-staging needed
     TNC_prestaging[TNC_prestaging<0] = 0
     TNC_prestaging = round(TNC_prestaging/peopleToCars)
+    TNC_prestaging  = round(TNC_prestaging * percentOfTNC)
     # generate trips
     TNC_prestaging_seconds = np.array(TNC_prestaging.index) * 30 * 60
     for t,numTNC in enumerate(TNC_prestaging.astype('int')):
@@ -912,7 +913,7 @@ def create_sumo_demand_TNC_curbside_base(people,
                         ET.SubElement(trip,"stop",busStop=stop,duration=duration,parking='true')
 
         ## dropp-off
-        
+
         else:
             for t,numberOfPeople in enumerate(people[column]):
                 numberOfVehicles = round((numberOfPeople/peopleToCars) * percentOfTNC)
