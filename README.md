@@ -30,9 +30,14 @@ File System for ATHENA SUMO
 - Congestion_Policies
      * [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies)
      * Simulate_on_Eagle folder with instructions on how to simulate on [Eagle Supercomputer](https://www.nrel.gov/hpc/eagle-system.html).
-     * Master_Function.ipynb: main notebook for generating policy scenario simulation
+     * Master_Function.ipynb: main notebook for generating simulations for different congestion policies
      * Ipython notebooks used by the Master_Function.ipynb notebooks
      * Ipython notebooks to test the functionality of Master_Function.ipynb
+- Simulate_on_Eagle:
+     * [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies)
+     * Create_Script.ipynb Ipython notebook for creating batch script files for running SUMO simulations on Eagle supercomputer
+     * Create_Script*.py python scripts to create batch files for running SUMO simulations on Eagle
+     * generateEdges*.py scripts to create SUMO xml files to get outputs from SUMO simulations
 - Example_Files
      * Prediction File
      * Folder w/ Sample Inputs
