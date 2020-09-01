@@ -41,6 +41,10 @@ cd ..
 cd AddFiles
 cp /projects/athena/sumo_data/input_files/AdditionalFiles/get_edge_out_year_* .
 ```
+You can also generate the output additional files by running the [generateEdgesOutXmls.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmls.py).
+<br>
+[generateEdgesOutXmlsWithSubFolder.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmlsWithSubFolder.py) regenerates edges-out xmls with desired subfolder within output/ folder.
+
 
 ### 7. From local computer,copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion folder](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
 
@@ -48,8 +52,9 @@ cp /projects/athena/sumo_data/input_files/AdditionalFiles/get_edge_out_year_* .
 ```bash
 scp Create_Script.py eagle.hpc.nrel.gov:/projects/athena/<NameOfyourWorkDirectory>/ScriptFiles/
 ```
-Use "Create_Script_Scaling.py" script to create many scenarios from one demand file scaled up or down to represent demand growth or decrease.
-Use "Create_Script_inParts.py" script to run one simulation in mutiple parts. This is useful when you have a simulation that takes more than 4 hours to complete.
+Use [Create_Script_Scaling.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/Create_Script_Scaling.py) script to create many scenarios from one demand file scaled up or down to represent demand growth or decrease.
+<br>
+Use [Create_Script_inParts.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/Create_Script_inParts.py) script to run one simulation in mutiple parts. This is useful when you have a simulation that takes more than 4 hours to complete.
 
 ### 9.  On Eagle, Open Create_Script.py python scrit, and change the 'time_in_hours', 'begin_year', 'end_year', and 'trip_file_prefix' parameters according to desired simulation years. Script explains values to give for these parameters.
 
@@ -99,5 +104,3 @@ cd output
 cp /projects/athena/juliette/output/convert_xml.slurm .
 ./convert_xml.slurm
 ```
-
-### Notes: Script "generateEdgesOutXmlsWithSubFolder.py" regenerates edges-out xmls with desired subfolder within output/ folder.
