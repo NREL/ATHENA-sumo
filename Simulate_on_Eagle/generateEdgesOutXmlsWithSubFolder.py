@@ -3,8 +3,10 @@ from xml.etree.ElementTree import Element
 from xml.dom import minidom
 import os
 
+# name of subfolder where to save output additional files
 subfolder = "tenPctMedium/"
 
+# Generate output additonal files for years specified in for loop range() command  
 for year in range(0,29):
     
     year = str(int(year))
@@ -34,7 +36,9 @@ for year in range(0,29):
     adds.append(edgeCongestionElem)
     adds.append(edgeEmissionElem)
 
+    # Name of output additonal file  
     file_name = "get_edge_out_year_" + year + ".xml"
+    # Folder where to save output additional file
     folder = "AddFiles/"
     #print("Saving to xml: ", file_name)
 

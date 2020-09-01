@@ -32,14 +32,14 @@ cp /projects/athena/sumo_data/input_files/Networks/DFW2.net.xml .
 ```bash
 cd ..
 cd AddFiles
-cp /projects/athena/sumo_data/input_files/AdditionalFiles/additional_2020-03-25.xml .
+cp /projects/athena/sumo_data/input_files/AdditionalFiles/2020-06-26.additional.xml .
 ```
 
-### 6.  Copy output additonal files to AddFiles folder (Include the '.' at the end command)
+### 6.  Copy output additonal files to AddFiles folder (Include the '.' at the end command). You can also generate the output additional files by running the [generateEdgesOutXmls.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmls.py)
 ```bash
 cd ..
 cd AddFiles
-cp /projects/athena/juliette/AddFiles/get_edge_out_year_* .
+cp /projects/athena/sumo_data/input_files/AdditionalFiles/get_edge_out_year_* .
 ```
 
 ### 7. From local computer,copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion folder](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
@@ -48,6 +48,8 @@ cp /projects/athena/juliette/AddFiles/get_edge_out_year_* .
 ```bash
 scp Create_Script.py eagle.hpc.nrel.gov:/projects/athena/<NameOfyourWorkDirectory>/ScriptFiles/
 ```
+Use "Create_Script_Scaling.py" script to create many scenarios from one demand file scaled up or down to represent demand growth or decrease.
+Use "Create_Script_inParts.py" script to run one simulation in mutiple parts. This is useful when you have a simulation that takes more than 4 hours to complete.
 
 ### 9.  On Eagle, Open Create_Script.py python scrit, and change the 'time_in_hours', 'begin_year', 'end_year', and 'trip_file_prefix' parameters according to desired simulation years. Script explains values to give for these parameters.
 
