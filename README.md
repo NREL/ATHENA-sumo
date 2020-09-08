@@ -68,6 +68,6 @@ instructions
 > use this [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies)  for 
 instructions
 
-### 2. Run simulation on Eagle. We suggest generating multiple route files with step 1 to run many simulation in parallel.
+### 2. Run simulation on Eagle. We suggest generating multiple route files with step 1 to run many simulations in parallel.
 > use  this [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies/Simulate_on_Eagle) for instructions
 
