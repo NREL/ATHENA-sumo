@@ -10,7 +10,7 @@ Yanbo Ge: <Yanbo.Ge@nrel.gov>
 
 ## THIS IS A CONFIG/ANALYSIS REPO
 ### Description of REPO
-<p>This repo is a container for all the code related to modeling DFW airport curbside (CTA modeling) using SUMO simulator and the pipeline into the infrustructure optimization model. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different congestion policies and how to run those simulation on NREL's [Eagle supercomputer](https://www.nrel.gov/hpc/eagle-system.html). The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
+<p>This repo is a container for all the code related to modeling DFW airport curbside (CTA modeling) using SUMO simulator and the pipeline into the infrustructure optimization model. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different congestion policies and how to run those simulation on NREL's Eagle supercomputer. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
 
 ### The following are contained in this repository
 
