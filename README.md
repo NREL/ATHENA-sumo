@@ -18,7 +18,15 @@ File System for ATHENA SUMO
 
 
 - Install_SUMO
-     * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Install_SUMO)
+ 
+```html
+if SUMO is not installed please refer to the link below for installation
+```
+1. MAC users: [SUMO for MACs](https://sumo.dlr.de/docs/Installing/MacOS_Build.html)
+      * If you have access to NREL GitHub use this [MAC install](https://github.nrel.gov/jseverin/Sumo/blob/master/README.md)
+2. Windows users: [SUMO for Windows](http://sumo.dlr.de/docs/Installing.html)
+
+     
 - Generate_SUMO_demand
      * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Generate_SUMO_demand)
      * environment.yml
