@@ -51,7 +51,7 @@ File System for ATHENA SUMO
 -	.gitignore
 -	README.md
 
-## HOW TO USE THIS REPO - GENERATE A SUMO SIMULATION
+## HOW TO - GENERATE A SUMO SIMULATION
 ![WorkFlow!](Athena_Workflow.png "How to use this repo")
 
 
@@ -67,7 +67,7 @@ instructions
 > use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Process_SUMO_output) for  
 instructions
 
-## HOW TO USE THIS REPO - GENERATE A CONGESTION POLICY SIMULATION
+## HOW TO - GENERATE A CONGESTION POLICY SIMULATION
 ![Master_function!](Master_Func_Workflow.png "How to generate congestion policy scenarion")
 
 ### 1. Generate congestion policy sumo xml route file
