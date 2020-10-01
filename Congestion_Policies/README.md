@@ -90,4 +90,4 @@ python $SUMO_HOME/tools/xml/xml2csv.py Output/summary.xml
 Additional outputs include: [edge-level traffic measures](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html) and [edge-level emission measures](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Emissions_Measures.html).
 
 ## STEP 5: Visualizations 
-in progress...
+Visualize one or multiple scenarios from different sumo simulations using the sumo output files (edge-based traffic, edge-based emissions, summary files & trip-based outputs). Single scenario visuals include mode choice graphs, emissions aggregated metrics, and traffic flow scatter plots. While multiple scenarios are compared on a timeseries basis for a given column from edge-based outputs. Refer to the notebook plotSumoCongestion.ipynb to generate these plots.
