@@ -1,0 +1,17 @@
+name: athena_sumo 
+channels:
+  - akode
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pandas
+  - jupyter
+  - lxml
+  - matplotlib
+  - seaborn
+  - pip:
+    - plotly
+    - requests
+    - cufflinks
+    - tqdm
