@@ -18,7 +18,6 @@ File System for ATHENA SUMO
 
 
 - Install_SUMO
-> if SUMO is not installed please refer to the README below for installation
      * [README](https://github.com/NREL/ATHENA-sumo/tree/master/Install_SUMO)
 - Generate_SUMO_demand
      * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Generate_SUMO_demand)

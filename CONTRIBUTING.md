@@ -1,6 +1,6 @@
 # Contributing
 
-When desiring to contribute to this repository, please first discuss your contribution via issue or email with the owners of this repository. You can then follow the instuctions for forking the repo to include your contribution. Otherwise, if you wish to use the code base and not collaborate, please clone and create new branch.
+When desiring to contribute to this repository, please first discuss your contribution via issue or email with the owners of this repository. You can then follow the instuctions for forking the repo to include your contribution. Otherwise, if you wish to use the code base and not collaborate, please clone and create a new branch.
 
 Joe: <joseph.severino@nrel.gov>
 Juliette: <Juliette.Ugirumurera@nrel.gov>
