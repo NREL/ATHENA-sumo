@@ -1,10 +1,10 @@
 # This folder has code for creating simulation for different scenarios and congestion policies
 > Click on the links below to skip to your respective step.
-- [**STEP 0: Clone Repo & Setup Env**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-0-clone-repo-and-setup-enviroment)
-- [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
-- [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-2-run-master-function)
-- [**STEP 3: Run policy scenario on personal computer**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-3-run-policy-scenario-on-personal-computer)
-- [**STEP 4: Run Simulation**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-run-sumo-simulation)
+- [**STEP 0: Clone Repo & Setup Env**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-0-clone-repo-and-setup-enviroment)
+- [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
+- [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-2-run-master-function)
+- [**STEP 3: Simulate policy scenario on personal computer**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-3-simulate-policy-scenario-on-personal-computer)
+- [**STEP 4: Simulate policy scenario on Eagle**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-simulate-policy-scenarion-on-HPC)
 - [**STEP 5: Visualize Outputs**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-5-visualizations)
 ## STEP 0: Clone REPO and Setup Enviroment
 > NOTE: Ensure this is done in a local enviroment – not on Eagle.
@@ -42,10 +42,10 @@ scp eagle.hpc.nrel.gov:/projects/athena/sumo_data/predicted_demand/athena_sumo_v
 This is the .ipynb that generates the Trips demand file. Parameters are explained in notebook.
 >  [**Master_Function.ipynb**](Master_Function.ipynb)
 
-## Step 3: Run policy scenario on personal computer
-> Use [these instructions](https://github.com/NREL/ATHENA-sumo/tree/JU_branch/Process_SUMO_output)
+## Step 3: Simulate policy scenario on personal computer
+> Use [these instructions](https://github.com/NREL/ATHENA-sumo/tree/master/Process_SUMO_output)
 
-## STEP 4: Run SUMO simulation on HPC
+## STEP 4: Simulate policy scenarion on HPC
 - Move Demand to HPC
 Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to **REPLACE {NameOfYourOutputDemand.xml}** with the file name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
