@@ -10,7 +10,7 @@ Yanbo Ge: <Yanbo.Ge@nrel.gov>
 
 ## THIS IS A CONFIG/ANALYSIS REPO
 ### Description of REPO
-<p>This repo is contains all the code related to modeling the Dallas-Fort Worth International Airport (DFW) curbside (CTA modeling) using SUMO simulator. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different traffic managment policies for DFW and how to run those simulation on personal computer or on NREL's Eagle supercomputer. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
+<p>This repo is contains all the code related to modeling the Dallas-Fort Worth International Airport (DFW) curbside (CTA modeling) using SUMO simulator. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different traffic managment policies for DFW and simlating those policeis on personal computer or on NREL's Eagle supercomputer. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
 
 ### The following are contained in this repository
 
@@ -18,13 +18,8 @@ File System for ATHENA SUMO
 
 
 - Install_SUMO
-> if SUMO is not installed please refer to the link below for installation
-
-  1. MAC users: [SUMO for MACs](https://sumo.dlr.de/docs/Installing/MacOS_Build.html)
-      * If you have access to NREL GitHub use this [MAC install](https://github.nrel.gov/jseverin/Sumo/blob/master/README.md)
-  2. Windows users: [SUMO for Windows](http://sumo.dlr.de/docs/Installing.html)
-
-     
+> if SUMO is not installed please refer to the README below for installation
+     * [README](https://github.com/NREL/ATHENA-sumo/tree/master/Install_SUMO)
 - Generate_SUMO_demand
      * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Generate_SUMO_demand)
      * environment.yml

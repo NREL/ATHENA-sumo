@@ -28,7 +28,7 @@ scp ../Example_Files/SUMO_Input_Files/{DFWNetworkFile.xml} eagle.hpc.nrel.gov:/p
 ```
 
 
-### 5.  Copy network additional file to AddFiles folder (Include the '.' at the end command)
+### 5.  Copy a network additional file to AddFiles folder (Include the '.' at the end command)
 ```bash
 cd ..
 cd AddFiles
@@ -36,8 +36,7 @@ scp ../Example_Files/SUMO_Input_Files/{DFWAdditionFile.xml} eagle.hpc.nrel.gov:/
 ```
 
 ### 6. Generate output additional files by running the [generateEdgesOutXmls.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmls.py).
-<br>
-[generateEdgesOutXmlsWithSubFolder.py] python script(https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmlsWithSubFolder.py) generates output additional files with desired subfolder within the output/ folder.
+>[generateEdgesOutXmlsWithSubFolder.py] python script(https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/generateEdgesOutXmlsWithSubFolder.py) generates output additional files with desired subfolder within the output folder.
 
 
 ### 7. From local computer,copy generated trip files (generated with Master_Function) into TripFiles folder. Follow the instructions in the [congestion folder](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies).
@@ -50,9 +49,9 @@ Use [Create_Script_Scaling.py](https://github.com/NREL/ATHENA-sumo/blob/master/S
 <br>
 Use [Create_Script_inParts.py](https://github.com/NREL/ATHENA-sumo/blob/master/Simulate_on_Eagle/Create_Script_inParts.py) script to run one simulation in mutiple parts. This is useful when you have a simulation that takes more than 4 hours to complete.
 
-### 9.  On Eagle, Open Create_Script.py python, and change the 'time_in_hours', 'begin_year', 'end_year', and 'trip_file_prefix' parameters according to desired simulation years. This Script explains values to give for these parameters.
+### 9.  On Eagle, open Create_Script.py python, and change the 'time_in_hours', 'begin_year', 'end_year', and 'trip_file_prefix' parameters according to desired simulation years. This Script explains values to give for these parameters.
 
-### 10.  On Eagle, run Create_Script.py to generate bash file to run your simulations on Eagle
+### 10.  On Eagle, run Create_Script.py to generate bash file to run your simulations on Eagle.
 ```bash
 cd ScriptFiles
 module load conda

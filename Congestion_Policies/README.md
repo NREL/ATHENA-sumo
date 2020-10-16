@@ -4,7 +4,7 @@
 - [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
 - [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-2-run-master-function)
 - [**STEP 3: Simulate policy scenario on personal computer**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-3-simulate-policy-scenario-on-personal-computer)
-- [**STEP 4: Simulate policy scenario on Eagle**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-simulate-policy-scenarion-on-HPC)
+- [**STEP 4: Simulate policy scenario on HPC**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-simulate-policy-scenarion-on-HPC)
 - [**STEP 5: Visualize Outputs**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-5-visualizations)
 ## STEP 0: Clone REPO and Setup Enviroment
 > NOTE: Ensure this is done in a local enviroment – not on Eagle.
