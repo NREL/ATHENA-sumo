@@ -18,7 +18,7 @@ File System for ATHENA SUMO
 
 
 - Install_SUMO
-     * [README](https://github.com/NREL/ATHENA-sumo/tree/master/Install_SUMO)
+     * [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Install_SUMO)
 - Generate_SUMO_demand
      * [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Generate_SUMO_demand)
      * environment.yml
