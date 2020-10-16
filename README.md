@@ -10,7 +10,7 @@ Yanbo Ge: <Yanbo.Ge@nrel.gov>
 
 ## THIS IS A CONFIG/ANALYSIS REPO
 ### Description of REPO
-<p>This repo is a container for all the code related to modeling DFW airport curbside (CTA modeling) using SUMO simulator and the pipeline into the infrustructure optimization model. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different congestion policies and how to run those simulation on NREL's Eagle supercomputer. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
+<p>This repo is contains all the code related to modeling the Dallas-Fort Worth International Airport (DFW) curbside (CTA modeling) using SUMO simulator. It demonstrates how to install, run and derive useful data from SUMO simulations. We will describe the basic files needed to run a simulation and how those files are generated.The repository also has code for generating simulations representing different traffic managment policies for DFW and how to run those simulation on personal computer or on NREL's Eagle supercomputer. The examples provided are a representation of the DFW airport for curbside dropoff and and pickup.</p>
 
 ### The following are contained in this repository
 
@@ -61,7 +61,7 @@ File System for ATHENA SUMO
 ### 2. Select day and generate Demand
 > use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Generate_SUMO_demand) for
 instructions
-### 3. Run SUMO simulation
+### 3. Run SUMO simulation - this steps SUMO has already been installed as shown above
 > use this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Process_SUMO_output)
 ### 4. Process Outputs
 > use  this [README.md](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Process_SUMO_output) for  
@@ -70,10 +70,11 @@ instructions
 ## HOW TO - GENERATE A CONGESTION POLICY SIMULATION
 ![Master_function!](Master_Func_Workflow.png "How to generate congestion policy scenarion")
 
-### 1. Generate congestion policy sumo xml route file
+### 1. Generate a congestion policy by running the [Master_Function.ipynb](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/Master_Function.ipynb) notebook. This results in a SUMO route file that encodes the congestion policy. 
 > use this [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies)  for 
 instructions
 
-### 2. Run simulation on Eagle. We suggest generating multiple route files with step 1 to run many simulations in parallel.
-> use  this [README.md](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies/Simulate_on_Eagle) for instructions
+### 2. Simulate the congestion policy scenario to evaluate the policy:
+- This can be done by running SUMO on personal computer using [these instruction](https://github.com/NREL/ATHENA-sumo/tree/master/Process_SUMO_output).
+- Or by generating many route files with step 1 to run many simulations in parallel on NREL's HPC system using [these instructions](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies/Simulate_on_Eagle).
 

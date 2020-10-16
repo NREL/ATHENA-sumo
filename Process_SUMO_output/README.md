@@ -2,20 +2,20 @@
 # RUN SUMO AND GENERATE OUTPUTS
 
 
-### Be sure to have all files to run a simulation and make sure $SUMO_HOME is in you path
+### Be sure to have all files to run a simulation and make sure SUMO is installed and $SUMO_HOME is in you path
 1. Sample input files can be found the [SUMO_input_files](https://github.com/NREL/ATHENA-siem-sumo/tree/master/Example_Files/SUMO_Input_Files)
 
 
 ## Running SUMO without gui (RUN this to process output files!):
 
-2. Running the simulation without a GUI
+2. Running the simulation without a GUI is shown in the example below using the [sample files](https://github.com/NREL/ATHENA-sumo/tree/master/Example_Files) provided.
 ```bash
-$SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml --additional-files additional_2018-06-11.xml -r trip_2017-12-31.xml  --device.emissions.probability 1 --tripinfo-output trip_output_low.xml --stop-output stop_output_low.xml 
+$SUMO_HOME/bin/sumo -n DFW_valid_2.net.xml  --additional-files 2020-06-26.additional.xml -r <ROUTE-FILE>  --device.emissions.probability 1 --tripinfo-output <TRIP-OUTPUT-FILE> --stop-output <STOP-OUTPUT-FILE>
 ```
-### Then convert XML -> CSV
+### Then convert the output XML files to CSV files
 3. Convert Outputs to CSV
 ```bash
-  python $SUMO_HOME/tools/xml/xml2csv.py <FILE.xml>
+  python $SUMO_HOME/tools/xml/xml2csv.py <OUTPUT-XML-FILE>
   
 ```
 

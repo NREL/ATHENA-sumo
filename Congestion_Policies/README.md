@@ -1,9 +1,9 @@
 # This folder has code for creating simulation for different scenarios and congestion policies
 > Click on the links below to skip to your respective step.
-- [**STEP 0: Clone Repo & Setup Env**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-0-clone-repo-and-setup-enviroment)
-- [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
-- [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-2-run-master-function)
-- [**STEP 3: Move Demand to Eagle**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-3-move-demand-to-eagle)
+- [**STEP 0: Clone Repo & Setup Env**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-0-clone-repo-and-setup-enviroment)
+- [**STEP 1: Ensure Dependencies**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-1-ensure-you-have-all-dependencies)
+- [**STEP 2: Run Master Function**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-2-run-master-function)
+- [**STEP 3: Run policy scenario on personal computer**](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/README.md#step-3-run-policy-scenario-on-personal-computer)
 - [**STEP 4: Run Simulation**](https://github.com/NREL/ATHENA-sumo/tree/master/Congestion_Policies#step-4-run-sumo-simulation)
 - [**STEP 5: Visualize Outputs**](https://github.com/NREL/ATHENA-sumo/blob/master/Congestion_Policies/README.md#step-5-visualizations)
 ## STEP 0: Clone REPO and Setup Enviroment
@@ -42,16 +42,18 @@ scp eagle.hpc.nrel.gov:/projects/athena/sumo_data/predicted_demand/athena_sumo_v
 This is the .ipynb that generates the Trips demand file. Parameters are explained in notebook.
 >  [**Master_Function.ipynb**](Master_Function.ipynb)
 
-## Step 3: Move Demand to Eagle
+## Step 3: Run policy scenario on personal computer
+> Use [these instructions](https://github.com/NREL/ATHENA-sumo/tree/JU_branch/Process_SUMO_output)
+
+## STEP 4: Run SUMO simulation on HPC
+- Move Demand to HPC
 Once you have generated your XML trips file, you will need to move it to Eagle and run it on HPC. To do this, you can run the code below. Be sure to **REPLACE {NameOfYourOutputDemand.xml}** with the file name you just generated. [**Master_Function.ipynb**](Master_Function.ipynb) will print the file name as the last line in the notebook.
 ```linux
 scp ../Example_Files/TempInputTrips/{NameOfYourOutputDemand.xml} eagle.hpc.nrel.gov:/scratch/{HPC user name}/path/to/Trips/.
 
 ```
 
-## STEP 4: Run SUMO simulation
-
-- Interactive Node example
+- Run on Interactive Node example
 ```linux
 ssh eagle.hpc.nrel.gov
 cd /scratch/{HPC_user_name}/path/to/run/Sumo
@@ -60,7 +62,7 @@ export SUMO_HOME="/projects/athena/sumo-installation/dist/sumo-git"
 $SUMO_HOME/bin/sumo -n Network/DFW2.net.xml --additional-files Additional_Files/additional_2019-12-11.xml -r Trips/2018-1-2.High.trips.xml --summary summary.xml --eager-insert t
 ```
 
-- As a batch file 
+- Run as a batch file 
 ```linux
 ssh eagle.hpc.nrel.gov
 cd /scratch/{HPC_user_name}/path/to/run/Sumo
@@ -90,4 +92,4 @@ python $SUMO_HOME/tools/xml/xml2csv.py Output/summary.xml
 Additional outputs include: [edge-level traffic measures](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html) and [edge-level emission measures](https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Emissions_Measures.html).
 
 ## STEP 5: Visualizations 
- Visualize one or multiple scenarios from different sumo simulations using the sumo output files (edge-based traffic, edge-based emissions, summary files & trip-based outputs). Single scenario visuals include mode choice graphs, emissions aggregated metrics, and traffic flow scatter plots. While multiple scenarios are compared on a timeseries basis for a given column from edge-based outputs. Refer to the notebook plotSumoCongestion.ipynb to generate these plots.
+ Visualize one or multiple scenarios from different sumo simulations using the sumo output files (edge-based traffic, edge-based emissions, summary files & trip-based outputs). Single scenario visuals include mode choice graphs, emissions aggregated metrics, and traffic flow scatter plots. While multiple scenarios are compared on a timeseries basis for a given column from edge-based outputs. Refer to the notebook [plotSumoCongestion.ipynb](https://github.com/NREL/ATHENA-sumo/blob/JU_branch/Congestion_Policies/plotSumoCongestion.ipynb) to generate these plots.
