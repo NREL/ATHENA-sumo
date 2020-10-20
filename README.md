@@ -1,12 +1,15 @@
 # ATHENA MODELING: SIMULATION WITH SUMO
 ### Contributors:
-Juliette Ugirumurera <Juliette.Ugirumurera@nrel.gov>.
+Juliette Ugirumurera <jugirumu@nrel.gov>.
 <br>
  Joseph Severino: <Joseph.Severino@nrel.gov>
 <br>
 Monte Lunacek: <Monte.Lunacek@nrel.gov>
 <br>
 Yanbo Ge: <Yanbo.Ge@nrel.gov>
+<br>
+Qichao Wang: <Qichao.Wang@nrel.gov>
+
 
 ## THIS IS A CONFIG/ANALYSIS REPO
 ### Description of REPO
